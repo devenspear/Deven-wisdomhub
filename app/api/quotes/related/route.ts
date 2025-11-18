@@ -23,6 +23,8 @@ export async function GET(request: Request) {
     }
 
     if (tags.length > 0) {
+      // Convert array to PostgreSQL array literal format: {tag1,tag2,tag3}
+      const tagList = `{${tags.join(',')}}`;
       const { rows } = await sql`
         SELECT
           q.id,
@@ -32,7 +34,7 @@ export async function GET(request: Request) {
         JOIN authors a ON q.author_id = a.id
         JOIN quote_tags qt ON q.id = qt.quote_id
         JOIN tags t ON qt.tag_id = t.id
-        WHERE t.name = ANY(${tags}) AND q.id != ${excludeId}
+        WHERE t.name = ANY(${tagList}::text[]) AND q.id != ${excludeId}
         GROUP BY q.id, a.name
         LIMIT 4;
       `;
