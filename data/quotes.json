@@ -1,0 +1,529 @@
+[
+  {
+    "id": "q-001",
+    "text": "All that we are is the result of what we have thought.",
+    "author_provided": "Buddha",
+    "author_actual": "Buddha",
+    "source": "The Dhammapada",
+    "tags": [
+      "mind",
+      "thought",
+      "reality",
+      "buddhism",
+      "consciousness"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-002",
+    "text": "The same boiling water that softens the potato hardens the egg.",
+    "author_provided": "Roald Dahl",
+    "author_actual": "Anonymous",
+    "source": "Modern Proverb",
+    "tags": [
+      "perspective",
+      "adversity",
+      "resilience",
+      "character",
+      "response"
+    ],
+    "notes": "Widely attributed to Roald Dahl, but this attribution is unsubstantiated and it's more likely a common proverb."
+  },
+  {
+    "id": "q-003",
+    "text": "A problem well stated is a problem half-solved.",
+    "author_provided": "Charles F. Kettering",
+    "author_actual": "Charles F. Kettering",
+    "source": "",
+    "tags": [
+      "problem-solving",
+      "clarity",
+      "strategy",
+      "definition",
+      "engineering"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-004",
+    "text": "Your discipline is your destiny. Your limitations begin where your self-discipline ends.",
+    "author_provided": "Master RJ",
+    "author_actual": "Master RJ",
+    "source": "",
+    "tags": [
+      "discipline",
+      "destiny",
+      "limitations",
+      "self-control",
+      "potential"
+    ],
+    "notes": "Assumed to be a personal or non-public figure."
+  },
+  {
+    "id": "q-005",
+    "text": "Writing is the Geometry of the Soul.",
+    "author_provided": "Plato",
+    "author_actual": "Plato",
+    "source": "",
+    "tags": [
+      "writing",
+      "soul",
+      "expression",
+      "philosophy",
+      "geometry"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-006",
+    "text": "Question with boldness even the existence of a God; because, if there be one, he must more approve of the homage of reason, than that of blind-folded fear.",
+    "author_provided": "Thomas Jefferson",
+    "author_actual": "Thomas Jefferson",
+    "source": "Letter to Peter Carr (1787)",
+    "tags": [
+      "reason",
+      "questioning",
+      "boldness",
+      "god",
+      "fear",
+      "religion",
+      "philosophy"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-007",
+    "text": "Surround yourself with people who remind you more of the future than the past.",
+    "author_provided": "Dan Sullivan",
+    "author_actual": "Dan Sullivan",
+    "source": "Strategic Coach",
+    "tags": [
+      "relationships",
+      "future",
+      "growth",
+      "mindset",
+      "past",
+      "association"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-008",
+    "text": "Whatever seems IN the way IS the way.",
+    "author_provided": "Matt Kahn",
+    "author_actual": "Matt Kahn",
+    "source": "",
+    "tags": [
+      "obstacles",
+      "perspective",
+      "growth",
+      "spirituality",
+      "acceptance",
+      "path"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-009",
+    "text": "Share your knowledge. It is a way to achieve immortality.",
+    "author_provided": "Dalai Lama",
+    "author_actual": "Dalai Lama",
+    "source": "",
+    "tags": [
+      "knowledge",
+      "sharing",
+      "immortality",
+      "legacy",
+      "teaching",
+      "service"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-010",
+    "text": "Mediocrity is self-inflicted and genius is self-bestowed.",
+    "author_provided": "Walter Russell",
+    "author_actual": "Walter Russell",
+    "source": "",
+    "tags": [
+      "mediocrity",
+      "genius",
+      "potential",
+      "self-creation",
+      "mindset",
+      "responsibility"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-011",
+    "text": "Learn like you’ll live forever.. live like you’ll die tomorrow.",
+    "author_provided": "Gandhi",
+    "author_actual": "Mahatma Gandhi",
+    "source": "",
+    "tags": [
+      "learning",
+      "living",
+      "urgency",
+      "perspective",
+      "life",
+      "balance"
+    ],
+    "notes": "This is a very common attribution, strongly associated with Gandhi."
+  },
+  {
+    "id": "q-012",
+    "text": "The lips of Wisdom are closed, except to the ears of Understanding.",
+    "author_provided": "The Kybalion",
+    "author_actual": "Three Initiates",
+    "source": "The Kybalion",
+    "tags": [
+      "wisdom",
+      "understanding",
+      "esoteric",
+      "hermeticism",
+      "readiness",
+      "teaching"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-013",
+    "text": "Philosopher > Initiate > Master",
+    "author_provided": null,
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "progression",
+      "mastery",
+      "philosophy",
+      "initiation",
+      "spiritual-path"
+    ],
+    "notes": "A common conceptual progression."
+  },
+  {
+    "id": "q-014",
+    "text": "Iteration IS innovation.",
+    "author_provided": null,
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "iteration",
+      "innovation",
+      "design",
+      "process",
+      "improvement",
+      "tech"
+    ],
+    "notes": "A common maxim in design and software development."
+  },
+  {
+    "id": "q-015",
+    "text": "Mind > Body > Soul",
+    "author_provided": null,
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "mind",
+      "body",
+      "soul",
+      "triality",
+      "holistic",
+      "hierarchy"
+    ],
+    "notes": "A common philosophical or spiritual concept."
+  },
+  {
+    "id": "q-016",
+    "text": "Knowledge > Experience > Wisdom",
+    "author_provided": null,
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "knowledge",
+      "experience",
+      "wisdom",
+      "progression",
+      "learning",
+      "growth"
+    ],
+    "notes": "A common conceptual progression."
+  },
+  {
+    "id": "q-017",
+    "text": "Thinking > Doing > Being",
+    "author_provided": null,
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "thinking",
+      "doing",
+      "being",
+      "progression",
+      "state",
+      "consciousness",
+      "mindfulness"
+    ],
+    "notes": "A common spiritual or psychological model."
+  },
+  {
+    "id": "q-018",
+    "text": "Success is the ability to go from failure to failure without a loss of enthusiasm.",
+    "author_provided": "Churchill",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "success",
+      "failure",
+      "enthusiasm",
+      "resilience",
+      "perseverance",
+      "mindset"
+    ],
+    "notes": "Widely attributed to Winston Churchill, but this attribution is unproven and disputed by the International Churchill Society."
+  },
+  {
+    "id": "q-019",
+    "text": "It’s the mark of an educated mind to be able to entertain a thought without accepting it.",
+    "author_provided": "Aristotle",
+    "author_actual": "Aristotle",
+    "source": "Nicomachean Ethics (paraphrase)",
+    "tags": [
+      "education",
+      "mind",
+      "open-mindedness",
+      "critical-thinking",
+      "philosophy",
+      "objectivity"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-020",
+    "text": "You don’t experience Life. You experience the Life you focus on.",
+    "author_provided": "Tony Robbins",
+    "author_actual": "Tony Robbins",
+    "source": "",
+    "tags": [
+      "focus",
+      "perspective",
+      "reality",
+      "mindset",
+      "experience",
+      "perception"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-021",
+    "text": "The greatest illusion is that mankind has limitations.",
+    "author_provided": "Robert Monroe",
+    "author_actual": "Robert Monroe",
+    "source": "",
+    "tags": [
+      "limitations",
+      "illusion",
+      "potential",
+      "consciousness",
+      "humanity",
+      "unlimited"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-022",
+    "text": "To be great is to be misunderstood.",
+    "author_provided": "Emerson",
+    "author_actual": "Ralph Waldo Emerson",
+    "source": "Self-Reliance",
+    "tags": [
+      "greatness",
+      "misunderstood",
+      "individuality",
+      "conformity",
+      "transcendentalism",
+      "non-conformity"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-023",
+    "text": "EGO: Edged God Out",
+    "author_provided": null,
+    "author_actual": "Anonymous",
+    "source": "Common acronym",
+    "tags": [
+      "ego",
+      "god",
+      "spirituality",
+      "acronym",
+      "mindset"
+    ],
+    "notes": "A common spiritual acronym, often attributed to or used by Wayne Dyer."
+  },
+  {
+    "id": "q-024",
+    "text": "You can either be a Host to God OR a hostage to your Ego.",
+    "author_provided": null,
+    "author_actual": "Wayne Dyer",
+    "source": "",
+    "tags": [
+      "ego",
+      "god",
+      "spirituality",
+      "choice",
+      "mindset",
+      "consciousness"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-025",
+    "text": "I give thanks daily, not for mere riches, but for wisdom with which to recognize, embrace, and properly use the great abundance of riches I now have at my command. I have no enemies because I injure no man for any cause, but I try to benefit all with whom I come in contact, by teaching them the way to enduring riches. I have more material wealth than I need because I am free from greed and covet only the material things I can use while I live.",
+    "author_provided": "Napoleon Hill",
+    "author_actual": "Napoleon Hill",
+    "source": "Think and Grow Rich (Prayer)",
+    "tags": [
+      "gratitude",
+      "wisdom",
+      "riches",
+      "abundance",
+      "greed",
+      "service",
+      "affirmation",
+      "enemies"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-026",
+    "text": "Everything is either an opportunity to grow or an obstacle to keep you from growing. You get to choose.",
+    "author_provided": "Wayne Dyer",
+    "author_actual": "Wayne Dyer",
+    "source": "",
+    "tags": [
+      "perspective",
+      "growth",
+      "obstacles",
+      "choice",
+      "mindset",
+      "opportunity"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-027",
+    "text": "Chase the Goddess of Wisdom and the Goddess of Wealth will chase you.",
+    "author_provided": "Deepak",
+    "author_actual": "Deepak Chopra's mother",
+    "source": "Story told by Deepak Chopra",
+    "tags": [
+      "wisdom",
+      "wealth",
+      "priority",
+      "spirituality",
+      "hinduism",
+      "lakshmi",
+      "saraswati"
+    ],
+    "notes": "Based on a story Deepak Chopra tells from his mother about the goddesses Lakshmi (Wealth) and Saraswati (Wisdom)."
+  },
+  {
+    "id": "q-028",
+    "text": "Bliss = God talking to you",
+    "author_provided": "Joseph Campbell",
+    "author_actual": "Joseph Campbell",
+    "source": "Concept",
+    "tags": [
+      "bliss",
+      "god",
+      "spirituality",
+      "purpose",
+      "intuition",
+      "joy"
+    ],
+    "notes": "This is a simplification of his concept 'Follow your bliss'."
+  },
+  {
+    "id": "q-029",
+    "text": "Our ordinary mind always tries to persuade us that we are nothing but acorns and that our greatest happiness will be to become bigger, fatter, shinier acorns; but that is of interest only to pigs. Our faith gives us knowledge of something better: that we can become oak trees.",
+    "author_provided": "E.F. Schumacher",
+    "author_actual": "E.F. Schumacher",
+    "source": "A Guide for the Perplexed",
+    "tags": [
+      "potential",
+      "mind",
+      "faith",
+      "growth",
+      "metaphor",
+      "acorn",
+      "purpose",
+      "spirituality"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-030",
+    "text": "Let me take you down, 'cause I'm going to. Strawberry fields. Nothing is real. And nothing to get hung about. Strawberry fields forever.",
+    "author_provided": null,
+    "author_actual": "The Beatles",
+    "source": "Strawberry Fields Forever (Song)",
+    "tags": [
+      "music",
+      "lyrics",
+      "the-beatles",
+      "reality",
+      "perception",
+      "consciousness"
+    ],
+    "notes": "Lyrics by Lennon-McCartney."
+  },
+  {
+    "id": "q-031",
+    "text": "Science without religion is lame, religion without science is blind.",
+    "author_provided": "Albert Einstein",
+    "author_actual": "Albert Einstein",
+    "source": "Science, Philosophy and Religion: A Symposium (1941)",
+    "tags": [
+      "science",
+      "religion",
+      "balance",
+      "perspective",
+      "philosophy",
+      "complementary"
+    ],
+    "notes": ""
+  },
+  {
+    "id": "q-032",
+    "text": "I am blessed and highly favored - good things are supposed to happen to me!",
+    "author_provided": "Ray Jackson",
+    "author_actual": "Ray Jackson",
+    "source": "",
+    "tags": [
+      "affirmation",
+      "blessed",
+      "favored",
+      "positive-thinking",
+      "mindset",
+      "expectation"
+    ],
+    "notes": "Assumed to be a personal or non-public figure."
+  },
+  {
+    "id": "q-033",
+    "text": "Money finds me easily and frequently.",
+    "author_provided": null,
+    "author_actual": "Anonymous",
+    "source": "Common affirmation",
+    "tags": [
+      "affirmation",
+      "money",
+      "abundance",
+      "manifestation",
+      "mindset"
+    ],
+    "notes": "A common abundance affirmation."
+  }
+]
