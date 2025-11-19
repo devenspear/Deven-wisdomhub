@@ -496,6 +496,11 @@ export default function Home() {
               <p className="font-medium text-slate-900 dark:text-slate-50">
                 I hope these words spark the same sense of discovery and inspiration in you that they've brought to me.
               </p>
+
+              <p className="mt-6 text-right italic text-slate-600 dark:text-slate-400">
+                With Love,<br />
+                Deven
+              </p>
             </div>
           </div>
         </div>
