@@ -210,9 +210,7 @@ export default function Home() {
     fetch(`/api/quotes?${queryParams.toString()}`)
       .then(res => res.json())
       .then(data => {
-        // Shuffle quotes on load
-        const shuffled = [...data].sort(() => Math.random() - 0.5);
-        setQuotes(shuffled);
+        setQuotes(data);
         setIsLoading(false);
       });
   }, [query, selectedTags, selectedAuthors]);
@@ -266,10 +264,10 @@ export default function Home() {
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <img src="/logo.png" alt="Logo" className="h-8 w-8 dark:hidden" />
-                <img src="/logo-dark.png" alt="Logo" className="hidden h-8 w-8 dark:block" />
+                <img src="/logo.png" alt="Logo" className="h-14 w-14 dark:hidden" />
+                <img src="/logo-dark.png" alt="Logo" className="hidden h-14 w-14 dark:block" />
                 <div>
-                  <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+                  <h1 className="text-3xl font-bold tracking-tight sm:text-4xl font-serif">
                     Deven's Wisdom Hub
                   </h1>
                   <p className="text-base text-slate-600 dark:text-slate-400">
