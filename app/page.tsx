@@ -2,7 +2,7 @@
 
 import { useMemo, useState, useEffect } from "react";
 import { ModeToggle } from "@/components/ui/ModeToggle";
-import { Search, Copy, Check, BookOpen, Sparkles, RotateCcw, Info, X } from "lucide-react";
+import { Search, Copy, Check, BookOpen, Sparkles, RotateCcw, Info, X, Shuffle } from "lucide-react";
 
 export type Quote = {
   id: string;
@@ -210,7 +210,9 @@ export default function Home() {
     fetch(`/api/quotes?${queryParams.toString()}`)
       .then(res => res.json())
       .then(data => {
-        setQuotes(data);
+        // Shuffle quotes on load
+        const shuffled = [...data].sort(() => Math.random() - 0.5);
+        setQuotes(shuffled);
         setIsLoading(false);
       });
   }, [query, selectedTags, selectedAuthors]);
@@ -252,21 +254,25 @@ export default function Home() {
     setSelectedAuthors([]);
   };
 
+  const handleShuffle = () => {
+    setQuotes(prev => [...prev].sort(() => Math.random() - 0.5));
+  };
+
   return (
     <main className="min-h-screen bg-gradient-to-br from-white to-slate-100 dark:from-slate-900 dark:to-slate-950 text-slate-900 dark:text-slate-50">
       {/* Compact Header */}
       <header className="border-b border-slate-200 bg-white/50 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/50 sticky top-0 z-10">
-        <div className="mx-auto max-w-7xl px-4 py-1">
+        <div className="mx-auto max-w-7xl px-4 py-2">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <img src="/logo.png" alt="Logo" className="h-8 w-8 dark:hidden" />
                 <img src="/logo-dark.png" alt="Logo" className="hidden h-8 w-8 dark:block" />
                 <div>
-                  <h1 className="text-xl font-bold tracking-tight sm:text-2xl">
+                  <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
                     Deven's Wisdom Hub
                   </h1>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                  <p className="text-base text-slate-600 dark:text-slate-400">
                     {quotes.length} quotes • {allAuthors.length} authors
                   </p>
                 </div>
@@ -283,9 +289,26 @@ export default function Home() {
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
                   placeholder="Search wisdom..."
-                  className="w-full rounded-full border border-slate-200 bg-white pl-10 pr-4 py-2 text-sm shadow-sm outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 dark:border-slate-800 dark:bg-slate-900 dark:focus:border-slate-700 dark:focus:ring-slate-800"
+                  className="w-full rounded-full border border-slate-200 bg-white pl-10 pr-10 py-2 text-sm shadow-sm outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 dark:border-slate-800 dark:bg-slate-900 dark:focus:border-slate-700 dark:focus:ring-slate-800"
                 />
+                {query && (
+                  <button
+                    onClick={() => setQuery("")}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-1 text-slate-400 hover:bg-slate-100 hover:text-slate-600 dark:hover:bg-slate-800 dark:hover:text-slate-300"
+                    title="Clear search"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                )}
               </div>
+              <button
+                onClick={handleShuffle}
+                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+                title="Randomize quote order"
+              >
+                <Shuffle className="h-4 w-4" />
+                Reshuffle
+              </button>
               <button
                 onClick={() => setIsFiltersOpen(!isFiltersOpen)}
                 className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition ${isFiltersOpen ? "border-slate-900 bg-slate-900 text-white dark:border-slate-50 dark:bg-slate-50 dark:text-slate-900" : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"}`}
