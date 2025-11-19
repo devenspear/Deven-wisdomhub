@@ -280,13 +280,13 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-1 items-center gap-3 md:max-w-2xl">
-              <div className="relative flex-1">
+            <div className="flex flex-1 items-center gap-2">
+              <div className="relative flex-1 min-w-0">
                 <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
                 <input
                   value={query}
                   onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Search wisdom..."
+                  placeholder="Search..."
                   className="w-full rounded-full border border-slate-200 bg-white pl-10 pr-10 py-2 text-sm shadow-sm outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 dark:border-slate-800 dark:bg-slate-900 dark:focus:border-slate-700 dark:focus:ring-slate-800"
                 />
                 {query && (
@@ -299,35 +299,69 @@ export default function Home() {
                   </button>
                 )}
               </div>
-              <button
-                onClick={handleShuffle}
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
-                title="Randomize quote order"
-              >
-                <Shuffle className="h-4 w-4" />
-                Reshuffle
-              </button>
-              <button
-                onClick={() => setIsFiltersOpen(!isFiltersOpen)}
-                className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition ${isFiltersOpen ? "border-slate-900 bg-slate-900 text-white dark:border-slate-50 dark:bg-slate-50 dark:text-slate-900" : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"}`}
-              >
-                <Sparkles className="h-4 w-4" />
-                Filters
-                {(selectedTags.length > 0 || selectedAuthors.length > 0) && (
-                  <span className="ml-1 flex h-5 w-5 items-center justify-center rounded-full bg-slate-100 text-xs text-slate-900 dark:bg-slate-800 dark:text-slate-50">
-                    {selectedTags.length + selectedAuthors.length}
-                  </span>
-                )}
-              </button>
-              <button
-                onClick={() => setIsAboutOpen(true)}
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
-              >
-                <Info className="h-4 w-4" />
-                About
-              </button>
-              <div className="hidden md:block">
-                <ModeToggle />
+
+              {/* Mobile: Icon-only buttons */}
+              <div className="flex items-center gap-2 md:hidden">
+                <button
+                  onClick={handleShuffle}
+                  className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-2 text-slate-700 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+                  title="Reshuffle"
+                >
+                  <Shuffle className="h-4 w-4" />
+                </button>
+                <button
+                  onClick={() => setIsFiltersOpen(!isFiltersOpen)}
+                  className={`inline-flex items-center justify-center rounded-full border p-2 transition ${isFiltersOpen ? "border-slate-900 bg-slate-900 text-white dark:border-slate-50 dark:bg-slate-50 dark:text-slate-900" : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"}`}
+                  title="Filters"
+                >
+                  <Sparkles className="h-4 w-4" />
+                  {(selectedTags.length > 0 || selectedAuthors.length > 0) && (
+                    <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-slate-900 text-[10px] text-white dark:bg-slate-50 dark:text-slate-900">
+                      {selectedTags.length + selectedAuthors.length}
+                    </span>
+                  )}
+                </button>
+                <button
+                  onClick={() => setIsAboutOpen(true)}
+                  className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-2 text-slate-700 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+                  title="About"
+                >
+                  <Info className="h-4 w-4" />
+                </button>
+              </div>
+
+              {/* Desktop: Full buttons with text */}
+              <div className="hidden md:flex md:items-center md:gap-3">
+                <button
+                  onClick={handleShuffle}
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+                  title="Randomize quote order"
+                >
+                  <Shuffle className="h-4 w-4" />
+                  Reshuffle
+                </button>
+                <button
+                  onClick={() => setIsFiltersOpen(!isFiltersOpen)}
+                  className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition ${isFiltersOpen ? "border-slate-900 bg-slate-900 text-white dark:border-slate-50 dark:bg-slate-50 dark:text-slate-900" : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"}`}
+                >
+                  <Sparkles className="h-4 w-4" />
+                  Filters
+                  {(selectedTags.length > 0 || selectedAuthors.length > 0) && (
+                    <span className="ml-1 flex h-5 w-5 items-center justify-center rounded-full bg-slate-100 text-xs text-slate-900 dark:bg-slate-800 dark:text-slate-50">
+                      {selectedTags.length + selectedAuthors.length}
+                    </span>
+                  )}
+                </button>
+                <button
+                  onClick={() => setIsAboutOpen(true)}
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+                >
+                  <Info className="h-4 w-4" />
+                  About
+                </button>
+                <div className="hidden md:block">
+                  <ModeToggle />
+                </div>
               </div>
             </div>
           </div>

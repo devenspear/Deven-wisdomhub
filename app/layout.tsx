@@ -25,6 +25,7 @@ const libreBaskerville = Libre_Baskerville({
 export const metadata: Metadata = {
   title: "Deven's Wisdom Hub",
   description: "Curate, search, and read your collection of quotes with ease.",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
 export default function RootLayout({
