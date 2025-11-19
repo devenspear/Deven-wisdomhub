@@ -14,7 +14,7 @@ interface Quote {
 
 async function importQuotes() {
   const client = await db.connect();
-  const quotesPath = path.join(process.cwd(), '..', 'quotes.json');
+  const quotesPath = path.join(process.cwd(), 'data', 'quotes.json');
   const quotesData = await fs.readFile(quotesPath, 'utf-8');
   const quotes: Quote[] = JSON.parse(quotesData);
 
