@@ -472,15 +472,6 @@ export default function Home() {
         </section>
       </div>
 
-      {/* Floating Action Button for Random Quote (Mobile) */}
-      <button
-        onClick={handleRandom}
-        className="fixed bottom-6 right-6 z-20 rounded-full bg-slate-900 p-4 text-white shadow-xl transition hover:scale-105 hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200 md:hidden"
-        title="Surprise me"
-      >
-        <Sparkles className="h-6 w-6" />
-      </button>
-
       {activeQuote && (
         <ReaderModal
           quote={activeQuote}
