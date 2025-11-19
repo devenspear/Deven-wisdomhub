@@ -255,16 +255,20 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-white to-slate-100 dark:from-slate-900 dark:to-slate-950 text-slate-900 dark:text-slate-50">
       {/* Compact Header */}
       <header className="border-b border-slate-200 bg-white/50 backdrop-blur-xl dark:border-slate-800 dark:bg-slate-950/50 sticky top-0 z-10">
-        <div className="mx-auto max-w-7xl px-4 py-3">
+        <div className="mx-auto max-w-7xl px-4 py-1">
           <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center justify-between">
-              <div>
-                <h1 className="text-xl font-bold tracking-tight sm:text-2xl">
-                  Wisdom Hub
-                </h1>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
-                  {quotes.length} quotes • {allAuthors.length} authors
-                </p>
+              <div className="flex items-center gap-3">
+                <img src="/logo.png" alt="Logo" className="h-8 w-8 dark:hidden" />
+                <img src="/logo-dark.png" alt="Logo" className="hidden h-8 w-8 dark:block" />
+                <div>
+                  <h1 className="text-xl font-bold tracking-tight sm:text-2xl">
+                    Deven's Wisdom Hub
+                  </h1>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">
+                    {quotes.length} quotes • {allAuthors.length} authors
+                  </p>
+                </div>
               </div>
               <div className="md:hidden">
                 <ModeToggle />

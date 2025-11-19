@@ -1,6 +1,9 @@
 import { db } from '@vercel/postgres';
 import { promises as fs } from 'fs';
 import path from 'path';
+import dotenv from 'dotenv';
+
+dotenv.config({ path: '.env.local' });
 
 async function migrate() {
   const client = await db.connect();

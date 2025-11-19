@@ -23,7 +23,7 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
-  title: "Personal Wisdom Hub",
+  title: "Deven's Wisdom Hub",
   description: "Curate, search, and read your collection of quotes with ease.",
 };
 
