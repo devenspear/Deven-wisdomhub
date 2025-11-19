@@ -90,7 +90,7 @@ const QuoteCard = ({ quote, onOpen, onTagToggle }: {
       <div className="mt-6 flex justify-between gap-3 text-sm">
         <button
           onClick={onOpen}
-          className="inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2 font-semibold text-white transition hover:translate-y-[-1px] hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200"
+          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-slate-700 to-slate-800 px-4 py-2 font-semibold text-white transition hover:translate-y-[-1px] hover:from-slate-600 hover:to-slate-700 dark:from-slate-600 dark:to-slate-700 dark:hover:from-slate-500 dark:hover:to-slate-600"
         >
           <BookOpen className="h-4 w-4" />
           Reader mode
