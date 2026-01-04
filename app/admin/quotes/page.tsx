@@ -16,6 +16,9 @@ import {
   StarOff,
   Sparkles,
   Loader2,
+  BookOpen,
+  CheckCircle,
+  AlertCircle,
 } from "lucide-react";
 
 type Tag = {
@@ -41,6 +44,18 @@ type QuoteFormData = {
   tags: string[];
   isFavorite: boolean;
 };
+
+type LookupResult = {
+  found: boolean;
+  text?: string;
+  authorName?: string;
+  source?: string;
+  tags?: string[];
+  confidence?: 'high' | 'medium' | 'low';
+  message?: string;
+};
+
+type ActiveTab = 'quotes' | 'lookup';
 
 const ITEMS_PER_PAGE = 20;
 
@@ -70,6 +85,22 @@ export default function AdminQuotesPage() {
   const [isLoadingSuggestions, setIsLoadingSuggestions] = useState(false);
   const debounceRef = useRef<NodeJS.Timeout | null>(null);
   const lastTextRef = useRef<string>("");
+
+  // Tab and Lookup state
+  const [activeTab, setActiveTab] = useState<ActiveTab>('quotes');
+  const [lookupInput, setLookupInput] = useState("");
+  const [isLookingUp, setIsLookingUp] = useState(false);
+  const [lookupResult, setLookupResult] = useState<LookupResult | null>(null);
+  const [lookupFormData, setLookupFormData] = useState<QuoteFormData>({
+    text: "",
+    authorName: "",
+    source: "",
+    tags: [],
+    isFavorite: false,
+  });
+  const [lookupTagInput, setLookupTagInput] = useState("");
+  const [isSavingLookup, setIsSavingLookup] = useState(false);
+  const [lookupSaveSuccess, setLookupSaveSuccess] = useState(false);
 
   const fetchQuotes = useCallback(async () => {
     setIsLoading(true);
@@ -224,6 +255,112 @@ export default function AdminQuotesPage() {
     setFormData({ ...formData, tags: formData.tags.filter((t) => t !== tag) });
   };
 
+  // Lookup functions
+  const handleLookupQuote = async () => {
+    if (lookupInput.trim().length < 10) return;
+
+    setIsLookingUp(true);
+    setLookupResult(null);
+    setLookupSaveSuccess(false);
+
+    try {
+      const res = await fetch("/api/admin/lookup-quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ partial: lookupInput }),
+      });
+
+      const data = await res.json();
+      setLookupResult(data);
+
+      if (data.found) {
+        setLookupFormData({
+          text: data.text || "",
+          authorName: data.authorName || "",
+          source: data.source || "",
+          tags: data.tags || [],
+          isFavorite: false,
+        });
+      }
+    } catch (error) {
+      console.error("Failed to lookup quote:", error);
+      setLookupResult({
+        found: false,
+        message: "Failed to lookup quote. Please try again.",
+      });
+    } finally {
+      setIsLookingUp(false);
+    }
+  };
+
+  const handleLookupAddTag = () => {
+    const tag = lookupTagInput.trim().toLowerCase();
+    if (tag && !lookupFormData.tags.includes(tag)) {
+      setLookupFormData({ ...lookupFormData, tags: [...lookupFormData.tags, tag] });
+      setLookupTagInput("");
+    }
+  };
+
+  const handleLookupRemoveTag = (tag: string) => {
+    setLookupFormData({
+      ...lookupFormData,
+      tags: lookupFormData.tags.filter((t) => t !== tag),
+    });
+  };
+
+  const handleSaveLookupQuote = async () => {
+    if (!lookupFormData.text.trim() || !lookupFormData.authorName.trim()) {
+      return;
+    }
+
+    setIsSavingLookup(true);
+    try {
+      const res = await fetch("/api/admin/quotes", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(lookupFormData),
+      });
+
+      if (res.ok) {
+        setLookupSaveSuccess(true);
+        fetchQuotes();
+        fetchMetadata();
+        // Reset after short delay
+        setTimeout(() => {
+          setLookupInput("");
+          setLookupResult(null);
+          setLookupFormData({
+            text: "",
+            authorName: "",
+            source: "",
+            tags: [],
+            isFavorite: false,
+          });
+          setLookupSaveSuccess(false);
+        }, 2000);
+      } else {
+        console.error("Failed to save quote");
+      }
+    } catch (error) {
+      console.error("Failed to save quote:", error);
+    } finally {
+      setIsSavingLookup(false);
+    }
+  };
+
+  const resetLookup = () => {
+    setLookupInput("");
+    setLookupResult(null);
+    setLookupFormData({
+      text: "",
+      authorName: "",
+      source: "",
+      tags: [],
+      isFavorite: false,
+    });
+    setLookupSaveSuccess(false);
+  };
+
   const handleSave = async () => {
     if (!formData.text.trim() || !formData.authorName.trim()) {
       return;
@@ -317,27 +454,56 @@ export default function AdminQuotesPage() {
             </div>
           </div>
 
-          {/* Search */}
-          <div className="mt-4">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
-              <input
-                value={query}
-                onChange={(e) => {
-                  setQuery(e.target.value);
-                  setPage(0);
-                }}
-                placeholder="Search quotes or authors..."
-                className="w-full rounded-lg border border-slate-200 bg-white py-2 pl-10 pr-4 text-sm shadow-sm outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:focus:border-slate-600 dark:focus:ring-slate-700"
-              />
-            </div>
+          {/* Tab Navigation */}
+          <div className="mt-4 flex gap-1 border-b border-slate-200 dark:border-slate-700">
+            <button
+              onClick={() => setActiveTab('quotes')}
+              className={`flex items-center gap-2 px-4 py-2 text-sm font-medium transition border-b-2 -mb-px ${
+                activeTab === 'quotes'
+                  ? 'border-slate-900 text-slate-900 dark:border-slate-50 dark:text-slate-50'
+                  : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
+              }`}
+            >
+              <Search className="h-4 w-4" />
+              Quotes
+            </button>
+            <button
+              onClick={() => setActiveTab('lookup')}
+              className={`flex items-center gap-2 px-4 py-2 text-sm font-medium transition border-b-2 -mb-px ${
+                activeTab === 'lookup'
+                  ? 'border-slate-900 text-slate-900 dark:border-slate-50 dark:text-slate-50'
+                  : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300'
+              }`}
+            >
+              <BookOpen className="h-4 w-4" />
+              Quote Lookup
+            </button>
           </div>
+
+          {/* Search - only show on quotes tab */}
+          {activeTab === 'quotes' && (
+            <div className="mt-4">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+                <input
+                  value={query}
+                  onChange={(e) => {
+                    setQuery(e.target.value);
+                    setPage(0);
+                  }}
+                  placeholder="Search quotes or authors..."
+                  className="w-full rounded-lg border border-slate-200 bg-white py-2 pl-10 pr-4 text-sm shadow-sm outline-none transition focus:border-slate-500 focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:focus:border-slate-600 dark:focus:ring-slate-700"
+                />
+              </div>
+            </div>
+          )}
         </div>
       </header>
 
       {/* Content */}
       <main className="mx-auto max-w-7xl px-4 py-6">
-        {isLoading ? (
+        {/* Quotes Tab */}
+        {activeTab === 'quotes' && (isLoading ? (
           <div className="space-y-4">
             {[...Array(5)].map((_, i) => (
               <div
@@ -461,6 +627,304 @@ export default function AdminQuotesPage() {
               </div>
             )}
           </>
+        ))}
+
+        {/* Quote Lookup Tab */}
+        {activeTab === 'lookup' && (
+          <div className="space-y-6">
+            {/* Lookup Input */}
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
+              <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+                Find a Famous Quote
+              </h2>
+              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                Enter part of a famous quote and AI will identify it with full details.
+              </p>
+              <div className="mt-4 flex gap-3">
+                <input
+                  type="text"
+                  value={lookupInput}
+                  onChange={(e) => setLookupInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && lookupInput.trim().length >= 10) {
+                      handleLookupQuote();
+                    }
+                  }}
+                  placeholder="e.g., to be or not to be..."
+                  className="flex-1 rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm transition focus:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-50 dark:focus:border-slate-600 dark:focus:ring-slate-700"
+                />
+                <button
+                  onClick={handleLookupQuote}
+                  disabled={isLookingUp || lookupInput.trim().length < 10}
+                  className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 text-sm font-medium text-white transition hover:bg-slate-800 disabled:opacity-50 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200"
+                >
+                  {isLookingUp ? (
+                    <>
+                      <Loader2 className="h-4 w-4 animate-spin" />
+                      Looking up...
+                    </>
+                  ) : (
+                    <>
+                      <Sparkles className="h-4 w-4" />
+                      Look Up Quote
+                    </>
+                  )}
+                </button>
+              </div>
+              {lookupInput.length > 0 && lookupInput.length < 10 && (
+                <p className="mt-2 text-sm text-amber-600 dark:text-amber-400">
+                  Enter at least 10 characters
+                </p>
+              )}
+            </div>
+
+            {/* Lookup Result */}
+            {lookupResult && (
+              <div className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
+                {lookupResult.found ? (
+                  <>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-5 w-5 text-green-500" />
+                        <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
+                          Quote Found
+                        </h3>
+                        {lookupResult.confidence && (
+                          <span
+                            className={`rounded-full px-2 py-0.5 text-xs font-medium ${
+                              lookupResult.confidence === 'high'
+                                ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
+                                : lookupResult.confidence === 'medium'
+                                ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400'
+                                : 'bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400'
+                            }`}
+                          >
+                            {lookupResult.confidence} confidence
+                          </span>
+                        )}
+                      </div>
+                      <button
+                        onClick={resetLookup}
+                        className="text-sm text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-300"
+                      >
+                        Clear
+                      </button>
+                    </div>
+
+                    {lookupResult.message && (
+                      <p className="mt-2 text-sm text-slate-500 dark:text-slate-400 italic">
+                        {lookupResult.message}
+                      </p>
+                    )}
+
+                    {/* Editable Form */}
+                    <div className="mt-6 space-y-4">
+                      {/* Quote text */}
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300">
+                          Quote Text
+                        </label>
+                        <textarea
+                          value={lookupFormData.text}
+                          onChange={(e) =>
+                            setLookupFormData({ ...lookupFormData, text: e.target.value })
+                          }
+                          rows={4}
+                          className="mt-1 block w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm transition focus:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-50 dark:focus:border-slate-600 dark:focus:ring-slate-700"
+                        />
+                      </div>
+
+                      {/* Author */}
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300">
+                          Author
+                        </label>
+                        <input
+                          type="text"
+                          value={lookupFormData.authorName}
+                          onChange={(e) =>
+                            setLookupFormData({ ...lookupFormData, authorName: e.target.value })
+                          }
+                          list="lookup-authors-list"
+                          className="mt-1 block w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm transition focus:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-50 dark:focus:border-slate-600 dark:focus:ring-slate-700"
+                        />
+                        <datalist id="lookup-authors-list">
+                          {allAuthors.map((author) => (
+                            <option key={author} value={author} />
+                          ))}
+                        </datalist>
+                      </div>
+
+                      {/* Source */}
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300">
+                          Source
+                        </label>
+                        <input
+                          type="text"
+                          value={lookupFormData.source}
+                          onChange={(e) =>
+                            setLookupFormData({ ...lookupFormData, source: e.target.value })
+                          }
+                          className="mt-1 block w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm transition focus:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-50 dark:focus:border-slate-600 dark:focus:ring-slate-700"
+                          placeholder="Book, speech, play, etc."
+                        />
+                      </div>
+
+                      {/* Tags */}
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300">
+                          Tags
+                        </label>
+                        <div className="mt-1 flex gap-2">
+                          <input
+                            type="text"
+                            value={lookupTagInput}
+                            onChange={(e) => setLookupTagInput(e.target.value)}
+                            onKeyDown={(e) => {
+                              if (e.key === "Enter") {
+                                e.preventDefault();
+                                handleLookupAddTag();
+                              }
+                            }}
+                            list="lookup-tags-list"
+                            className="flex-1 rounded-lg border border-slate-300 bg-white px-4 py-2 text-slate-900 shadow-sm transition focus:border-slate-500 focus:outline-none focus:ring-2 focus:ring-slate-200 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-50 dark:focus:border-slate-600 dark:focus:ring-slate-700"
+                            placeholder="Add a tag..."
+                          />
+                          <datalist id="lookup-tags-list">
+                            {allTags
+                              .filter((t) => !lookupFormData.tags.includes(t))
+                              .map((tag) => (
+                                <option key={tag} value={tag} />
+                              ))}
+                          </datalist>
+                          <button
+                            type="button"
+                            onClick={handleLookupAddTag}
+                            className="rounded-lg bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
+                          >
+                            Add
+                          </button>
+                        </div>
+                        {lookupFormData.tags.length > 0 && (
+                          <div className="mt-2 flex flex-wrap gap-2">
+                            {lookupFormData.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-300"
+                              >
+                                #{tag}
+                                <button
+                                  type="button"
+                                  onClick={() => handleLookupRemoveTag(tag)}
+                                  className="ml-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
+                                >
+                                  <X className="h-3 w-3" />
+                                </button>
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Favorite */}
+                      <div className="flex items-center gap-3">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setLookupFormData({
+                              ...lookupFormData,
+                              isFavorite: !lookupFormData.isFavorite,
+                            })
+                          }
+                          className={`inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition ${
+                            lookupFormData.isFavorite
+                              ? "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400"
+                              : "bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400"
+                          }`}
+                        >
+                          {lookupFormData.isFavorite ? (
+                            <>
+                              <Star className="h-4 w-4 fill-current" />
+                              Favorited
+                            </>
+                          ) : (
+                            <>
+                              <StarOff className="h-4 w-4" />
+                              Mark as Favorite
+                            </>
+                          )}
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Save Button */}
+                    <div className="mt-6 flex justify-end gap-3">
+                      <button
+                        onClick={resetLookup}
+                        className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
+                      >
+                        Cancel
+                      </button>
+                      <button
+                        onClick={handleSaveLookupQuote}
+                        disabled={
+                          isSavingLookup ||
+                          lookupSaveSuccess ||
+                          !lookupFormData.text.trim() ||
+                          !lookupFormData.authorName.trim()
+                        }
+                        className={`inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition ${
+                          lookupSaveSuccess
+                            ? "bg-green-600 text-white"
+                            : "bg-slate-900 text-white hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200"
+                        } disabled:opacity-50`}
+                      >
+                        {isSavingLookup ? (
+                          <>
+                            <Loader2 className="h-4 w-4 animate-spin" />
+                            Saving...
+                          </>
+                        ) : lookupSaveSuccess ? (
+                          <>
+                            <CheckCircle className="h-4 w-4" />
+                            Saved!
+                          </>
+                        ) : (
+                          <>
+                            <Plus className="h-4 w-4" />
+                            Add to Database
+                          </>
+                        )}
+                      </button>
+                    </div>
+                  </>
+                ) : (
+                  <div className="flex items-start gap-3">
+                    <AlertCircle className="h-5 w-5 text-amber-500 mt-0.5" />
+                    <div>
+                      <h3 className="font-medium text-slate-900 dark:text-slate-50">
+                        Quote Not Found
+                      </h3>
+                      <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                        {lookupResult.message || "Could not identify this quote. Try entering more of the quote or check the spelling."}
+                      </p>
+                      <button
+                        onClick={() => {
+                          setActiveTab('quotes');
+                          openAddModal();
+                        }}
+                        className="mt-4 inline-flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
+                      >
+                        <Plus className="h-4 w-4" />
+                        Add Manually
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
         )}
       </main>
 
