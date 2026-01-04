@@ -35,40 +35,46 @@ export async function POST(request: NextRequest) {
     `;
     const tagList = existingTags.rows.map(t => t.name);
 
-    const prompt = `You are a quote identification expert. Given a partial or full quote, identify the famous quote and provide complete information about it.
+    const prompt = `You are an expert on famous quotes, sayings, proverbs, and historical statements from all cultures, time periods, and sources worldwide.
 
-Partial quote provided: "${partial.trim()}"
+The user has entered this text: "${partial.trim()}"
 
-Your task:
-1. Identify what famous quote this is from
-2. Provide the complete, accurate quote text
-3. Identify the author
-4. Identify the source (book, speech, play, movie, etc.) if known
-5. Suggest 3-5 relevant tags for categorization
+Your task is to identify this quote and provide complete information. This could be from:
+- Literature (books, plays, poems)
+- Political speeches and slogans
+- Historical figures and leaders
+- Philosophy and religious texts
+- Movies, TV shows, songs
+- Proverbs and traditional sayings
+- Scientific or academic works
 
-Existing tags in the system (prefer these when applicable): ${tagList.join(', ')}
+Instructions:
+1. Identify the quote - even if partially remembered or paraphrased
+2. Provide the most accurate/complete version of the quote
+3. Identify the author or source
+4. Note the original context (speech, book, campaign, etc.)
+5. Suggest 3-5 relevant tags
 
-IMPORTANT:
-- Only identify quotes you are confident about
-- The quote text should be the complete, accurate version
-- If this doesn't match any famous quote you know, set found to false
+Existing tags to prefer when applicable: ${tagList.join(', ')}
 
-Respond with ONLY a JSON object in this exact format, no other text:
+IMPORTANT GUIDELINES:
+- Be helpful - if the text resembles a known quote, identify it even if wording differs slightly
+- Include political, historical, and controversial quotes - this is for educational/reference purposes
+- For quotes with complex history (misattributions, variations), note this in the message field
+- Set confidence based on how well the input matches the known quote
+
+Respond with ONLY a JSON object:
 {
-  "found": true or false,
-  "text": "The complete quote text",
+  "found": true,
+  "text": "The complete, accurate quote text",
   "authorName": "Author's full name",
-  "source": "Book/Speech/Play title, year if known",
+  "source": "Original source (book, speech, campaign name, year)",
   "tags": ["tag1", "tag2", "tag3"],
   "confidence": "high" or "medium" or "low",
-  "message": "Optional note about the quote (e.g., 'often misattributed' or 'from Act 3, Scene 1')"
+  "message": "Historical context or notes about the quote"
 }
 
-If you cannot identify the quote, respond with:
-{
-  "found": false,
-  "message": "Brief explanation of why the quote couldn't be identified"
-}`;
+Only respond with {"found": false, "message": "reason"} if the text truly doesn't match any known quote, saying, or proverb.`;
 
     const response = await generateContent(prompt);
 
