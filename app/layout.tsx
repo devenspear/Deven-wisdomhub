@@ -23,7 +23,7 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 export const metadata: Metadata = {
-  title: "Deven's Wisdom Hub",
+  title: "My Wisdom Hub",
   description: "A curated collection of 133 quotes gathered over 20 years from books, interviews, and diverse sources. Discover insights on wisdom, philosophy, and personal growth.",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1",
   keywords: ["quotes", "wisdom", "philosophy", "inspiration", "personal growth", "knowledge", "insights"],
@@ -36,15 +36,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://nlight10.me",
-    title: "Deven's Wisdom Hub",
+    title: "My Wisdom Hub",
     description: "A curated collection of 133 quotes gathered over 20 years. Discover insights on wisdom, philosophy, and personal growth.",
-    siteName: "Deven's Wisdom Hub",
+    siteName: "My Wisdom Hub",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Deven's Wisdom Hub Logo",
+        alt: "My Wisdom Hub Logo",
       },
     ],
   },
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   // Twitter Card metadata
   twitter: {
     card: "summary",
-    title: "Deven's Wisdom Hub",
+    title: "My Wisdom Hub",
     description: "A curated collection of 133 quotes gathered over 20 years.",
     images: ["/og-image.png"],
   },

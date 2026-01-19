@@ -210,7 +210,9 @@ export default function Home() {
     fetch(`/api/quotes?${queryParams.toString()}`)
       .then(res => res.json())
       .then(data => {
-        setQuotes(data);
+        // Auto-shuffle quotes on every load for a fresh experience
+        const shuffled = [...data].sort(() => Math.random() - 0.5);
+        setQuotes(shuffled);
         setIsLoading(false);
       });
   }, [query, selectedTags, selectedAuthors]);
@@ -267,8 +269,8 @@ export default function Home() {
                 <img src="/logo.png" alt="Logo" className="h-14 w-14 dark:hidden" />
                 <img src="/logo-dark.png" alt="Logo" className="hidden h-14 w-14 dark:block" />
                 <div>
-                  <h1 className="text-3xl font-bold tracking-tight sm:text-4xl font-serif">
-                    Deven's Wisdom Hub
+                  <h1 className="text-2xl font-bold tracking-tight sm:text-3xl font-serif">
+                    My Wisdom Hub
                   </h1>
                   <p className="text-base text-slate-600 dark:text-slate-400">
                     {quotes.length} quotes • {allAuthors.length} authors
