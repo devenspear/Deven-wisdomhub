@@ -1,3 +1,15 @@
+/**
+ * import-quotes.ts — ONE-TIME seed script (JSON → Postgres)
+ *
+ * This was used to initially populate the database from data/quotes.json.
+ * It should NOT be run again — the database is now the single source of truth,
+ * with 15+ quotes added via the admin tool that don't exist in the original JSON.
+ *
+ * For the reverse direction (Postgres → JSON/Markdown), use:
+ *   pnpm export-quotes       # Sync JSON
+ *   pnpm export-quotes:md    # Sync JSON + regenerate Markdown
+ */
+
 import { db } from '@vercel/postgres';
 import { promises as fs } from 'fs';
 import path from 'path';

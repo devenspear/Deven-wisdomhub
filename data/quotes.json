@@ -5,7 +5,13 @@
     "author_provided": "Buddha",
     "author_actual": "Buddha",
     "source": "The Dhammapada",
-    "tags": ["mind", "thought", "reality", "buddhism", "consciousness"]
+    "tags": [
+      "buddhism",
+      "consciousness",
+      "mind",
+      "reality",
+      "thought"
+    ]
   },
   {
     "id": "q-002",
@@ -13,7 +19,13 @@
     "author_provided": "Roald Dahl",
     "author_actual": "Anonymous",
     "source": "Modern Proverb",
-    "tags": ["perspective", "adversity", "resilience", "character"],
+    "tags": [
+      "adversity",
+      "character",
+      "perspective",
+      "resilience",
+      "response"
+    ],
     "notes": "Often misattributed to Roald Dahl."
   },
   {
@@ -22,7 +34,13 @@
     "author_provided": "Charles F. Kettering",
     "author_actual": "Charles F. Kettering",
     "source": "",
-    "tags": ["problem-solving", "clarity", "strategy", "engineering"]
+    "tags": [
+      "clarity",
+      "definition",
+      "engineering",
+      "problem-solving",
+      "strategy"
+    ]
   },
   {
     "id": "q-004",
@@ -30,7 +48,13 @@
     "author_provided": "Master RJ",
     "author_actual": "Master RJ",
     "source": "",
-    "tags": ["discipline", "destiny", "limitations", "self-control"]
+    "tags": [
+      "destiny",
+      "discipline",
+      "limitations",
+      "potential",
+      "self-control"
+    ]
   },
   {
     "id": "q-005",
@@ -38,7 +62,13 @@
     "author_provided": "Plato",
     "author_actual": "Plato",
     "source": "",
-    "tags": ["writing", "soul", "philosophy", "expression"]
+    "tags": [
+      "expression",
+      "geometry",
+      "philosophy",
+      "soul",
+      "writing"
+    ]
   },
   {
     "id": "q-006",
@@ -46,15 +76,30 @@
     "author_provided": "Thomas Jefferson",
     "author_actual": "Thomas Jefferson",
     "source": "Letter to Peter Carr (1787)",
-    "tags": ["reason", "questioning", "boldness", "god", "religion"]
+    "tags": [
+      "boldness",
+      "fear",
+      "god",
+      "philosophy",
+      "questioning",
+      "reason",
+      "religion"
+    ]
   },
   {
     "id": "q-007",
     "text": "Surround yourself with people who remind you more of the future than the past.",
     "author_provided": "Dan Sullivan",
     "author_actual": "Dan Sullivan",
-    "source": "",
-    "tags": ["relationships", "growth", "future", "environment"]
+    "source": "Strategic Coach",
+    "tags": [
+      "association",
+      "future",
+      "growth",
+      "mindset",
+      "past",
+      "relationships"
+    ]
   },
   {
     "id": "q-008",
@@ -62,15 +107,29 @@
     "author_provided": "Matt Kahn",
     "author_actual": "Matt Kahn",
     "source": "",
-    "tags": ["obstacles", "perspective", "acceptance", "flow"]
+    "tags": [
+      "acceptance",
+      "growth",
+      "obstacles",
+      "path",
+      "perspective",
+      "spirituality"
+    ]
   },
   {
     "id": "q-009",
     "text": "Share your knowledge. It is a way to achieve immortality.",
     "author_provided": "Dalai Lama",
     "author_actual": "Dalai Lama",
-    "source": "The 14th Dalai Lama",
-    "tags": ["knowledge", "legacy", "service", "teaching"]
+    "source": "",
+    "tags": [
+      "immortality",
+      "knowledge",
+      "legacy",
+      "service",
+      "sharing",
+      "teaching"
+    ]
   },
   {
     "id": "q-010",
@@ -78,7 +137,14 @@
     "author_provided": "Walter Russell",
     "author_actual": "Walter Russell",
     "source": "",
-    "tags": ["mediocrity", "genius", "responsibility", "mindset"]
+    "tags": [
+      "genius",
+      "mediocrity",
+      "mindset",
+      "potential",
+      "responsibility",
+      "self-creation"
+    ]
   },
   {
     "id": "q-011",
@@ -86,7 +152,14 @@
     "author_provided": "Gandhi",
     "author_actual": "Mahatma Gandhi",
     "source": "",
-    "tags": ["learning", "life", "urgency", "balance"]
+    "tags": [
+      "balance",
+      "learning",
+      "life",
+      "living",
+      "perspective",
+      "urgency"
+    ]
   },
   {
     "id": "q-012",
@@ -94,7 +167,14 @@
     "author_provided": "The Kybalion",
     "author_actual": "Three Initiates",
     "source": "The Kybalion",
-    "tags": ["wisdom", "understanding", "hermeticism", "esoteric"]
+    "tags": [
+      "esoteric",
+      "hermeticism",
+      "readiness",
+      "teaching",
+      "understanding",
+      "wisdom"
+    ]
   },
   {
     "id": "q-013",
@@ -102,7 +182,13 @@
     "author_provided": "Anonymous",
     "author_actual": "Anonymous",
     "source": "",
-    "tags": ["growth", "hierarchy", "mastery", "spirituality"]
+    "tags": [
+      "initiation",
+      "mastery",
+      "philosophy",
+      "progression",
+      "spiritual-path"
+    ]
   },
   {
     "id": "q-014",
@@ -110,7 +196,14 @@
     "author_provided": "Anonymous",
     "author_actual": "Anonymous",
     "source": "",
-    "tags": ["innovation", "process", "design", "creativity"]
+    "tags": [
+      "design",
+      "improvement",
+      "innovation",
+      "iteration",
+      "process",
+      "tech"
+    ]
   },
   {
     "id": "q-015",
@@ -118,7 +211,14 @@
     "author_provided": "Anonymous",
     "author_actual": "Anonymous",
     "source": "",
-    "tags": ["mind", "body", "soul", "alignment"]
+    "tags": [
+      "body",
+      "hierarchy",
+      "holistic",
+      "mind",
+      "soul",
+      "triality"
+    ]
   },
   {
     "id": "q-016",
@@ -126,7 +226,14 @@
     "author_provided": "Anonymous",
     "author_actual": "Anonymous",
     "source": "",
-    "tags": ["knowledge", "wisdom", "experience", "growth"]
+    "tags": [
+      "experience",
+      "growth",
+      "knowledge",
+      "learning",
+      "progression",
+      "wisdom"
+    ]
   },
   {
     "id": "q-017",
@@ -134,7 +241,15 @@
     "author_provided": "Anonymous",
     "author_actual": "Anonymous",
     "source": "",
-    "tags": ["being", "doing", "thinking", "consciousness"]
+    "tags": [
+      "being",
+      "consciousness",
+      "doing",
+      "mindfulness",
+      "progression",
+      "state",
+      "thinking"
+    ]
   },
   {
     "id": "q-018",
@@ -142,7 +257,14 @@
     "author_provided": "Churchill",
     "author_actual": "Anonymous",
     "source": "",
-    "tags": ["success", "failure", "resilience", "enthusiasm"],
+    "tags": [
+      "enthusiasm",
+      "failure",
+      "mindset",
+      "perseverance",
+      "resilience",
+      "success"
+    ],
     "notes": "Widely attributed to Winston Churchill, but there is no evidence he said this."
   },
   {
@@ -150,8 +272,15 @@
     "text": "It’s the mark of an educated mind to be able to entertain a thought without accepting it.",
     "author_provided": "Aristotle",
     "author_actual": "Aristotle",
-    "source": "Nicomachean Ethics (Paraphrase)",
-    "tags": ["education", "mind", "open-mindedness", "critical-thinking"]
+    "source": "Nicomachean Ethics (paraphrase)",
+    "tags": [
+      "critical-thinking",
+      "education",
+      "mind",
+      "objectivity",
+      "open-mindedness",
+      "philosophy"
+    ]
   },
   {
     "id": "q-020",
@@ -159,7 +288,14 @@
     "author_provided": "Tony Robbins",
     "author_actual": "Tony Robbins",
     "source": "",
-    "tags": ["focus", "perception", "experience", "reality"]
+    "tags": [
+      "experience",
+      "focus",
+      "mindset",
+      "perception",
+      "perspective",
+      "reality"
+    ]
   },
   {
     "id": "q-021",
@@ -167,7 +303,14 @@
     "author_provided": "Robert Monroe",
     "author_actual": "Robert Monroe",
     "source": "",
-    "tags": ["limitations", "potential", "illusion", "consciousness"]
+    "tags": [
+      "consciousness",
+      "humanity",
+      "illusion",
+      "limitations",
+      "potential",
+      "unlimited"
+    ]
   },
   {
     "id": "q-022",
@@ -175,904 +318,1702 @@
     "author_provided": "Emerson",
     "author_actual": "Ralph Waldo Emerson",
     "source": "Self-Reliance",
-    "tags": ["greatness", "individuality", "conformity", "misunderstood"]
+    "tags": [
+      "conformity",
+      "greatness",
+      "individuality",
+      "misunderstood",
+      "non-conformity",
+      "transcendentalism"
+    ]
   },
   {
     "id": "q-023",
-    "text": "The greatest shortcoming of the human race is our inability to understand the exponential function.",
-    "author_provided": "Albert A. Bartlett",
-    "author_actual": "Albert A. Bartlett",
-    "source": "",
-    "tags": ["science", "math", "humanity", "future"]
+    "text": "EGO: Edged God Out",
+    "author_provided": "Wayne Dyer",
+    "author_actual": "Anonymous",
+    "source": "Common acronym",
+    "tags": [
+      "acronym",
+      "ego",
+      "god",
+      "mindset",
+      "spirituality"
+    ]
   },
   {
     "id": "q-024",
-    "text": "I love us.",
-    "author_provided": "de@",
-    "author_actual": "Deven",
-    "source": "Personal Affirmation",
-    "tags": ["love", "unity", "affirmation"]
-  },
-  {
-    "id": "q-025",
-    "text": "Integrity is the essence of everything successful.",
-    "author_provided": "Buckminster Fuller",
-    "author_actual": "R. Buckminster Fuller",
-    "source": "",
-    "tags": ["integrity", "success", "values", "character"]
-  },
-  {
-    "id": "q-026",
-    "text": "The three most harmful addictions are heroin, carbohydrates, and a monthly salary.",
-    "author_provided": "Anonymous",
-    "author_actual": "Nassim Nicholas Taleb",
-    "source": "The Bed of Procrustes",
-    "tags": ["addiction", "work", "health", "independence", "salary"]
-  },
-  {
-    "id": "q-027",
-    "text": "It’s not worth an intelligent man’s time to be in the majority. By definition, there are already enough people to do that.",
-    "author_provided": "GHHardy",
-    "author_actual": "G.H. Hardy",
-    "source": "A Mathematician's Apology",
-    "tags": ["intelligence", "conformity", "individuality", "majority"]
-  },
-  {
-    "id": "q-028",
-    "text": "Be curious, not judgmental.",
-    "author_provided": "Ted Lasso",
-    "author_actual": "Walt Whitman (Attributed)",
-    "source": "Ted Lasso (TV Show)",
-    "tags": ["curiosity", "judgment", "kindness", "mindset"],
-    "notes": "Popularized by the show Ted Lasso, who attributes it to Whitman, though Whitman likely never said it."
-  },
-  {
-    "id": "q-029",
-    "text": "Live life to the fullest. You have to color outside the lines once in a while if you want to make your life a masterpiece. Laugh some every day. Keep growing, keep dreaming, keep following your heart. The important thing is not to stop questioning.",
-    "author_provided": "Albert Einstein",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["life", "dreams", "happiness", "questioning"],
-    "notes": "This is a pastiche of generic inspirational quotes incorrectly attributed to Einstein."
-  },
-  {
-    "id": "q-030",
-    "text": "Truth is a pathless land.",
-    "author_provided": "Krishnamurti",
-    "author_actual": "Jiddu Krishnamurti",
-    "source": "Speech (1929)",
-    "tags": ["truth", "spirituality", "freedom", "path"]
-  },
-  {
-    "id": "q-031",
-    "text": "The truth has zero maintenance costs.",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["truth", "honesty", "simplicity", "lies"]
-  },
-  {
-    "id": "q-032",
-    "text": "Be a free thinker and don't accept everything you hear as truth. Be critical and evaluate what you believe in.",
-    "author_provided": "Aristotle",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["thinking", "truth", "critical-thinking", "belief"],
-    "notes": "Unlikely to be a genuine Aristotle quote."
-  },
-  {
-    "id": "q-033",
-    "text": "Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has.",
-    "author_provided": "Margaret Mead",
-    "author_actual": "Margaret Mead",
-    "source": "",
-    "tags": ["activism", "change", "community", "leadership"]
-  },
-  {
-    "id": "q-034",
-    "text": "Train yourself to let go of everything you fear to lose.",
-    "author_provided": "Yoda",
-    "author_actual": "George Lucas",
-    "source": "Star Wars: Revenge of the Sith",
-    "tags": ["attachment", "fear", "letting-go", "jedi"]
-  },
-  {
-    "id": "q-035",
-    "text": "It's easier to fool people than to convince them that they have been fooled.",
-    "author_provided": "Mark Twain",
-    "author_actual": "Mark Twain (Attributed)",
-    "source": "",
-    "tags": ["deception", "human-nature", "belief", "pride"]
-  },
-  {
-    "id": "q-036",
-    "text": "The illiterate of the twenty-first century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn.",
-    "author_provided": "ALVIN TOFFLER",
-    "author_actual": "Alvin Toffler",
-    "source": "Future Shock",
-    "tags": ["learning", "adaptation", "future", "growth"]
-  },
-  {
-    "id": "q-037",
-    "text": "Great minds discuss ideas; average minds discuss events; small minds discuss people.",
-    "author_provided": "Eleanor Roosevelt",
-    "author_actual": "Eleanor Roosevelt",
-    "source": "",
-    "tags": ["mind", "ideas", "gossip", "conversation"]
-  },
-  {
-    "id": "q-038",
-    "text": "As the most intelligent form of life on this Earth, humans are the only ones that have to pay to live here. Does that not strike you as odd?",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["society", "economics", "nature", "perspective"]
-  },
-  {
-    "id": "q-039",
-    "text": "The only thing new in the world is the history you do not know.",
-    "author_provided": "Harry S. Truman",
-    "author_actual": "Harry S. Truman",
-    "source": "",
-    "tags": ["history", "learning", "knowledge", "perspective"]
-  },
-  {
-    "id": "q-040",
-    "text": "I Am the universe.",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "Affirmation",
-    "tags": ["affirmation", "unity", "spirituality", "universe"]
-  },
-  {
-    "id": "q-041",
-    "text": "I don’t have to believe everything I think.",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["mindfulness", "thoughts", "belief", "meta-cognition"]
-  },
-  {
-    "id": "q-042",
-    "text": "Your birth and death happened at the same time.",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["time", "life", "death", "non-duality"]
-  },
-  {
-    "id": "q-043",
-    "text": "Intellectuals solve problems, geniuses prevent them.",
-    "author_provided": "Albert Einstein",
-    "author_actual": "Albert Einstein (Attributed)",
-    "source": "",
-    "tags": ["intelligence", "genius", "problem-solving", "prevention"]
-  },
-  {
-    "id": "q-044",
-    "text": "Broken crayons color as good as new ones.",
-    "author_provided": "Ginger",
-    "author_actual": "Ginger",
-    "source": "Personal",
-    "tags": ["resilience", "utility", "value", "optimism"]
-  },
-  {
-    "id": "q-045",
-    "text": "Embrace the present moment with gratefulness and wonder, and you will turn it into whatever you have been waiting for.",
-    "author_provided": "Neale D Walsh",
-    "author_actual": "Neale Donald Walsch",
-    "source": "",
-    "tags": ["present-moment", "gratitude", "manifestation", "perspective"]
-  },
-  {
-    "id": "q-046",
-    "text": "A flower is simply a weed with a marketing budget.",
-    "author_provided": "Anonymous",
-    "author_actual": "Rory Sutherland",
-    "source": "Alchemy",
-    "tags": ["marketing", "perception", "value", "business"]
-  },
-  {
-    "id": "q-047",
-    "text": "Some men see things as they are and say, why; I dream things that never were and say, why not.",
-    "author_provided": "George Bernard Shaw",
-    "author_actual": "George Bernard Shaw",
-    "source": "Back to Methuselah",
-    "tags": ["dreams", "innovation", "possibility", "vision"]
-  },
-  {
-    "id": "q-048",
-    "text": "The quality of your mind determines the quality of your life.",
-    "author_provided": "Sam Harris",
-    "author_actual": "Sam Harris",
-    "source": "Waking Up",
-    "tags": ["mind", "life", "consciousness", "meditation"]
-  },
-  {
-    "id": "q-049",
-    "text": "There are millions of people who carry very toxic narratives in their mind and they call it 'my life'.",
-    "author_provided": "Tolle",
-    "author_actual": "Eckhart Tolle",
-    "source": "",
-    "tags": ["narrative", "mind", "suffering", "identity"]
-  },
-  {
-    "id": "q-050",
-    "text": "Man. Because he sacrifices his health in order to make money. Then he sacrifices money to recuperate his health. And then he is so anxious about the future that he does not enjoy the present; the result being that he does not live in the present or the future; he lives as if he is never going to die, and then dies having never really lived.",
-    "author_provided": "Dalai Lama",
-    "author_actual": "James J. Lachard",
-    "source": "",
-    "tags": ["humanity", "money", "health", "time", "irony"],
-    "notes": "Commonly attributed to the Dalai Lama, but likely written by James J. Lachard."
-  },
-  {
-    "id": "q-051",
-    "text": "Would you rather be right or be happy?",
-    "author_provided": "Anonymous",
-    "author_actual": "Helen Schucman",
-    "source": "A Course in Miracles",
-    "tags": ["happiness", "ego", "choice", "conflict"]
-  },
-  {
-    "id": "q-052",
-    "text": "Silence is the language of god, all else is poor translation.",
-    "author_provided": "Rumi",
-    "author_actual": "Rumi",
-    "source": "",
-    "tags": ["silence", "god", "spirituality", "communication"]
-  },
-  {
-    "id": "q-053",
-    "text": "The day science begins to study non-physical phenomena, it will make more progress in one decade than in all the previous centuries of its existence.",
-    "author_provided": "Nikola Tesla",
-    "author_actual": "Nikola Tesla (Attributed)",
-    "source": "",
-    "tags": ["science", "spirituality", "progress", "energy"]
-  },
-  {
-    "id": "q-054",
-    "text": "It is no measure of health to be well adjusted to a profoundly sick society.",
-    "author_provided": "Jiddu Krishnamurti",
-    "author_actual": "Jiddu Krishnamurti",
-    "source": "",
-    "tags": ["society", "health", "conformity", "sanity"]
-  },
-  {
-    "id": "q-055",
-    "text": "The time to fix the roof is when the sun is shining.",
-    "author_provided": "John F Kennedy",
-    "author_actual": "John F. Kennedy",
-    "source": "State of the Union (1962)",
-    "tags": ["preparation", "action", "timing", "prudence"]
-  },
-  {
-    "id": "q-056",
-    "text": "Our infinite potential exists just on the other side of our discomfort zone.",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["potential", "discomfort", "growth", "courage"]
-  },
-  {
-    "id": "q-057",
-    "text": "Faith and Fear ask of you the same thing - to believe in something unseen.",
-    "author_provided": "Theo/Jesus",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["faith", "fear", "belief", "perspective"]
-  },
-  {
-    "id": "q-058",
-    "text": "Life isn't as serious as my mind makes it out to be.",
-    "author_provided": "Eckhart Tolle",
-    "author_actual": "Eckhart Tolle",
-    "source": "",
-    "tags": ["life", "mind", "seriousness", "ego"]
-  },
-  {
-    "id": "q-059",
-    "text": "The only thing that interferes with my learning is my education.",
-    "author_provided": "Albert Einstein",
-    "author_actual": "Albert Einstein",
-    "source": "",
-    "tags": ["learning", "education", "schooling", "knowledge"]
-  },
-  {
-    "id": "q-060",
-    "text": "The ancestor of every action is a thought.",
-    "author_provided": "Emerson",
-    "author_actual": "Ralph Waldo Emerson",
-    "source": "Essays: First Series",
-    "tags": ["thought", "action", "cause-and-effect", "manifestation"]
-  },
-  {
-    "id": "q-061",
-    "text": "From the very forest itself comes the handle of the axe that fells it.",
-    "author_provided": "TB Sanhedrin 39b",
-    "author_actual": "The Talmud",
-    "source": "Sanhedrin 39b",
-    "tags": ["irony", "self-destruction", "wisdom", "origin"]
-  },
-  {
-    "id": "q-062",
-    "text": "We are slaves to whatever we don’t understand.",
-    "author_provided": "Vernon Howard",
-    "author_actual": "Vernon Howard",
-    "source": "",
-    "tags": ["understanding", "freedom", "ignorance", "slavery"]
-  },
-  {
-    "id": "q-063",
-    "text": "What you resist persists, and that what you think about, you bring about.",
-    "author_provided": "Anonymous",
-    "author_actual": "Carl Jung (Concept)",
-    "source": "",
-    "tags": ["resistance", "manifestation", "psychology", "focus"]
-  },
-  {
-    "id": "q-064",
-    "text": "The basis of life is absolute freedom. The objective of life is absolute joy. The result of life is absolute growth.",
-    "author_provided": "Esther Hicks",
-    "author_actual": "Abraham-Hicks",
-    "source": "",
-    "tags": ["freedom", "joy", "growth", "purpose"]
-  },
-  {
-    "id": "q-065",
-    "text": "The purpose of life is to know and express Who You Are. If you do other than that during the days and times of your life, you will have not used those days and times in a way that profits your soul. It is soul profit we are after here, not body profit.",
-    "author_provided": "Neale Walsh",
-    "author_actual": "Neale Donald Walsch",
-    "source": "Conversations with God",
-    "tags": ["purpose", "soul", "expression", "life"]
-  },
-  {
-    "id": "q-066",
-    "text": "I completely trust my Infinite Self to do Anything in this lifetime.",
-    "author_provided": "de",
-    "author_actual": "Deven",
-    "source": "Personal Affirmation",
-    "tags": ["trust", "self", "infinite", "affirmation"]
-  },
-  {
-    "id": "q-067",
-    "text": "Beliefs are the master plan used to create your reality.",
-    "author_provided": "Mira Kelly",
-    "author_actual": "Mira Kelley",
-    "source": "",
-    "tags": ["beliefs", "reality", "creation", "manifestation"]
-  },
-  {
-    "id": "q-068",
-    "text": "Money can buy you a fine dog, but only love can make him wag his tail.",
-    "author_provided": "Kinky Friedman",
-    "author_actual": "Kinky Friedman",
-    "source": "",
-    "tags": ["money", "love", "happiness", "value"]
-  },
-  {
-    "id": "q-069",
-    "text": "Miracles seldom occur in the lives of those who do not consider them possible.",
-    "author_provided": "Neale Donald Walsh",
-    "author_actual": "Neale Donald Walsch",
-    "source": "",
-    "tags": ["miracles", "belief", "possibility", "mindset"]
-  },
-  {
-    "id": "q-070",
-    "text": "The Lamps are different, but the LIGHT is the same.",
-    "author_provided": "Rumi",
-    "author_actual": "Rumi",
-    "source": "",
-    "tags": ["unity", "diversity", "spirituality", "light"]
-  },
-  {
-    "id": "q-071",
-    "text": "I dwell in possibility.",
-    "author_provided": "Emily Dickinson",
-    "author_actual": "Emily Dickinson",
-    "source": "Poetry",
-    "tags": ["possibility", "hope", "poetry", "imagination"]
-  },
-  {
-    "id": "q-072",
-    "text": "Those who danced were thought insane by those who could not hear the music.",
-    "author_provided": "Friedrich Nietzsche",
-    "author_actual": "Angela Monet",
-    "source": "",
-    "tags": ["perception", "music", "insanity", "judgment"],
-    "notes": "Often attributed to Nietzsche, but the earliest source is Angela Monet."
-  },
-  {
-    "id": "q-073",
-    "text": "Love is metaphysical gravity.",
-    "author_provided": "Bucky Fuller",
-    "author_actual": "R. Buckminster Fuller",
-    "source": "",
-    "tags": ["love", "gravity", "physics", "connection"]
-  },
-  {
-    "id": "q-074",
-    "text": "There are only two mistakes one can make along the road to truth; not going all the way, and not starting.",
-    "author_provided": "Buddha",
-    "author_actual": "Buddha",
-    "source": "",
-    "tags": ["truth", "action", "persistence", "mistakes"]
-  },
-  {
-    "id": "q-075",
-    "text": "The great secret is a controlled imagination and a well-sustained attention firmly and repeatedly focused on the feeling of the wish fulfilled until it fills the mind and crowds all other ideas out of consciousness.",
-    "author_provided": "Neville Goddard",
-    "author_actual": "Neville Goddard",
-    "source": "",
-    "tags": ["imagination", "focus", "manifestation", "consciousness"]
-  },
-  {
-    "id": "q-076",
-    "text": "At the center of your being you have the answer; you know who you are and you know what you want.",
-    "author_provided": "Lao Tsu",
-    "author_actual": "Lao Tzu",
-    "source": "",
-    "tags": ["self-knowledge", "intuition", "being", "answers"]
-  },
-  {
-    "id": "q-077",
-    "text": "You see, to go out of your mind, at least once a day, is tremendously important because by going out of your mind you will come to your senses.",
-    "author_provided": "Alan Watts",
-    "author_actual": "Alan Watts",
-    "source": "",
-    "tags": ["mind", "sanity", "consciousness", "perspective"]
-  },
-  {
-    "id": "q-078",
-    "text": "We are not human beings having a spiritual experience. We are spiritual beings having a human experience.",
-    "author_provided": "Pierre Teilhard de Chardin",
-    "author_actual": "Pierre Teilhard de Chardin",
-    "source": "",
-    "tags": ["spirituality", "humanity", "perspective", "being"]
-  },
-  {
-    "id": "q-079",
-    "text": "Fall in love with your work, writing.",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["work", "passion", "writing", "love"]
-  },
-  {
-    "id": "q-080",
-    "text": "Religion is for people who are scared to go to hell. Spirituality is for people who have already been there.",
-    "author_provided": "Bonnie Raitt",
-    "author_actual": "Vine Deloria Jr.",
-    "source": "",
-    "tags": ["religion", "spirituality", "hell", "growth"],
-    "notes": "Often credited to Bonnie Raitt, but originally Vine Deloria Jr."
-  },
-  {
-    "id": "q-081",
-    "text": "Science advances one death at a time.",
-    "author_provided": "Anonymous",
-    "author_actual": "Max Planck",
-    "source": "Scientific Autobiography",
-    "tags": ["science", "progress", "change", "paradigms"],
-    "notes": "Paraphrase of Planck's Principle."
-  },
-  {
-    "id": "q-082",
-    "text": "In the age of information, ignorance is a choice.",
-    "author_provided": "Donny Miller",
-    "author_actual": "Donny Miller",
-    "source": "",
-    "tags": ["information", "ignorance", "choice", "learning"]
-  },
-  {
-    "id": "q-083",
-    "text": "The more you are willing to just let the world be something you’re aware of, the more it will let you be who you are— the awareness, the Self, the Atman, the Soul.",
-    "author_provided": "Michael Singer",
-    "author_actual": "Michael Singer",
-    "source": "The Untethered Soul",
-    "tags": ["awareness", "self", "soul", "surrender"]
-  },
-  {
-    "id": "q-084",
-    "text": "The opposite of a correct statement is a false statement. But the opposite of a profound truth may well be another profound truth.",
-    "author_provided": "Niels Bohr",
-    "author_actual": "Niels Bohr",
-    "source": "",
-    "tags": ["truth", "paradox", "wisdom", "perspective"]
-  },
-  {
-    "id": "q-085",
-    "text": "I believe that banking institutions are more dangerous to our liberties than standing armies.",
-    "author_provided": "Thomas Jefferson",
-    "author_actual": "Thomas Jefferson (Spurious)",
-    "source": "",
-    "tags": ["banking", "liberty", "politics", "money"],
-    "notes": "This quote is widely considered spurious or misattributed."
-  },
-  {
-    "id": "q-086",
-    "text": "The secret of change is to focus all of your energy, not on fighting the old, but on building the new.",
-    "author_provided": "Socrates",
-    "author_actual": "Dan Millman",
-    "source": "Way of the Peaceful Warrior",
-    "tags": ["change", "focus", "growth", "energy"],
-    "notes": "Often misattributed to the philosopher Socrates; it is from a character named Socrates in Dan Millman's book."
-  },
-  {
-    "id": "q-087",
-    "text": "It's not what you look at that matters, it's what you see.",
-    "author_provided": "Henry David Thoreau",
-    "author_actual": "Henry David Thoreau",
-    "source": "",
-    "tags": ["perception", "perspective", "vision", "mind"]
-  },
-  {
-    "id": "q-088",
-    "text": "Your vision will become clear only when you look into your heart. Who looks outside, dreams. Who looks inside, awakens.",
-    "author_provided": "Carl Jung",
-    "author_actual": "Carl Jung",
-    "source": "Letters",
-    "tags": ["vision", "heart", "awakening", "introspection"]
-  },
-  {
-    "id": "q-089",
-    "text": "If you want to find the secrets of the universe, think in terms of energy, frequency and vibration.",
-    "author_provided": "Nikola Tesla",
-    "author_actual": "Nikola Tesla (Attributed)",
-    "source": "",
-    "tags": ["universe", "energy", "vibration", "physics"]
-  },
-  {
-    "id": "q-090",
-    "text": "If you only knew the magnificence of the 3, 6 and 9, then you would have the key to the universe.",
-    "author_provided": "Nikola Tesla",
-    "author_actual": "Nikola Tesla (Attributed)",
-    "source": "",
-    "tags": ["universe", "math", "numbers", "mystery"]
-  },
-  {
-    "id": "q-091",
-    "text": "If we have any pain in us at all, it means we have something to forgive.",
-    "author_provided": "Sculptor in the Sky",
-    "author_actual": "Teal Swan",
-    "source": "The Sculptor in the Sky",
-    "tags": ["pain", "forgiveness", "healing", "emotion"]
-  },
-  {
-    "id": "q-092",
-    "text": "Every great architect is - necessarily - a great poet. He must be a great original interpreter of his time, his day, his age.",
-    "author_provided": "Frank Lloyd Wright",
-    "author_actual": "Frank Lloyd Wright",
-    "source": "",
-    "tags": ["architecture", "poetry", "art", "creativity"]
-  },
-  {
-    "id": "q-093",
-    "text": "An investment in knowledge always pays the best interest.",
-    "author_provided": "Benjamin Franklin",
-    "author_actual": "Benjamin Franklin",
-    "source": "The Way to Wealth",
-    "tags": ["knowledge", "investment", "value", "learning"]
-  },
-  {
-    "id": "q-094",
-    "text": "If you take your time, Deven, you'll have more of it.",
-    "author_provided": "The Universe",
-    "author_actual": "Mike Dooley",
-    "source": "Notes from the Universe",
-    "tags": ["time", "patience", "life", "perspective"]
-  },
-  {
-    "id": "q-095",
-    "text": "Make Bliss my Life's Purpose.",
-    "author_provided": "Deven",
-    "author_actual": "Deven",
-    "source": "Personal Affirmation",
-    "tags": ["bliss", "purpose", "affirmation", "life"]
-  },
-  {
-    "id": "q-096",
-    "text": "It's not hard to make decisions when you know what your values are.",
-    "author_provided": "Roy E. Disney",
-    "author_actual": "Roy E. Disney",
-    "source": "",
-    "tags": ["decisions", "values", "clarity", "integrity"]
-  },
-  {
-    "id": "q-097",
-    "text": "The Universe doesn't hear what you say, the Universe hears what you mean.",
-    "author_provided": "Abraham",
-    "author_actual": "Abraham-Hicks",
-    "source": "",
-    "tags": ["manifestation", "intention", "universe", "vibration"]
-  },
-  {
-    "id": "q-098",
-    "text": "I AM the resurrection and the life in thought and feeling.",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "Biblical / Affirmation",
-    "tags": ["affirmation", "life", "resurrection", "spirituality"]
-  },
-  {
-    "id": "q-099",
-    "text": "Man's concept of himself determines the world in which he lives.",
-    "author_provided": "Neville",
-    "author_actual": "Neville Goddard",
-    "source": "",
-    "tags": ["self-concept", "reality", "manifestation", "mind"]
-  },
-  {
-    "id": "q-100",
-    "text": "Accept whatever comes to you woven in the pattern of your destiny, for what could more aptly fit your needs?",
-    "author_provided": "Marcus Aurelius",
-    "author_actual": "Marcus Aurelius",
-    "source": "Meditations",
-    "tags": ["acceptance", "destiny", "stoicism", "fate"]
-  },
-  {
-    "id": "q-101",
-    "text": "All riches have their origin in mind. Wealth is in ideas - not money.",
-    "author_provided": "Robert Collier",
-    "author_actual": "Robert Collier",
-    "source": "",
-    "tags": ["wealth", "mind", "ideas", "riches"]
-  },
-  {
-    "id": "q-102",
-    "text": "If one advances confidently in the direction of his dreams, and endeavors to live the life which he has imagined, he will meet with a success unexpected in common hours.",
-    "author_provided": "Henry David Thoreau",
-    "author_actual": "Henry David Thoreau",
-    "source": "Walden",
-    "tags": ["dreams", "success", "confidence", "action"]
-  },
-  {
-    "id": "q-103",
-    "text": "The highest form of knowledge is to know who you are.",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["knowledge", "self-knowledge", "identity", "wisdom"]
-  },
-  {
-    "id": "q-104",
-    "text": "Forgiveness is the fragrance that the violet sheds on the heel that has crushed it.",
-    "author_provided": "Mark Twain",
-    "author_actual": "Mark Twain",
-    "source": "",
-    "tags": ["forgiveness", "grace", "metaphor", "kindness"]
-  },
-  {
-    "id": "q-105",
-    "text": "If the highest aim of a captain were to preserve his ship, he would keep it in port forever.",
-    "author_provided": "St. Thomas Aquinas",
-    "author_actual": "St. Thomas Aquinas",
-    "source": "",
-    "tags": ["purpose", "risk", "courage", "action"]
-  },
-  {
-    "id": "q-106",
-    "text": "I am whole, perfect, strong, powerful, loving, harmonious, prosperous and happy.",
-    "author_provided": "Charles F. Haanel",
-    "author_actual": "Charles F. Haanel",
-    "source": "The Master Key System",
-    "tags": ["affirmation", "mindset", "power", "perfection"]
-  },
-  {
-    "id": "q-107",
-    "text": "Manage your energy, not your time.",
-    "author_provided": "Tony Schwartz",
-    "author_actual": "Tony Schwartz",
-    "source": "The Power of Full Engagement",
-    "tags": ["productivity", "energy", "time", "management"]
-  },
-  {
-    "id": "q-108",
-    "text": "Have a Mind that is Open to Everything and Attached to Nothing.",
-    "author_provided": "Wayne Dyer",
-    "author_actual": "Tilopa (Adaptation)",
-    "source": "",
-    "tags": ["open-mindedness", "detachment", "mind", "buddhism"],
-    "notes": "Often used by Wayne Dyer, but based on the teachings of Tilopa."
-  },
-  {
-    "id": "q-109",
-    "text": "Change is inevitable but learning is optional.",
-    "author_provided": "Anonymous",
-    "author_actual": "John C. Maxwell",
-    "source": "",
-    "tags": ["change", "learning", "growth", "choice"]
-  },
-  {
-    "id": "q-110",
-    "text": "You're only aware of the reality you choose to observe.",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["reality", "observation", "choice", "perception"]
-  },
-  {
-    "id": "q-111",
-    "text": "Nothing real can be threatened. Nothing unreal exists.",
-    "author_provided": "Anonymous",
-    "author_actual": "Helen Schucman",
-    "source": "A Course in Miracles",
-    "tags": ["reality", "illusion", "truth", "spirituality"]
-  },
-  {
-    "id": "q-112",
-    "text": "The world as you know it is a picture of your expectations.",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["world", "expectations", "perception", "mind"]
-  },
-  {
-    "id": "q-113",
-    "text": "Belief structures reality!",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["belief", "reality", "structure", "manifestation"]
-  },
-  {
-    "id": "q-114",
-    "text": "All The Truths of All the Worlds are written all around, and inside us. It only takes the eyes to see.",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["truth", "wisdom", "perception", "nature"]
-  },
-  {
-    "id": "q-115",
-    "text": "I hear and I forget. I see and I remember. I do and I understand.",
-    "author_provided": "Confucius",
-    "author_actual": "Confucius",
-    "source": "",
-    "tags": ["learning", "action", "understanding", "experience"]
-  },
-  {
-    "id": "q-116",
-    "text": "Too many people spend money they haven't earned, to buy things they don't want, to impress people they don't like.",
-    "author_provided": "Will Rogers",
-    "author_actual": "Will Rogers",
-    "source": "",
-    "tags": ["money", "materialism", "society", "impressions"]
-  },
-  {
-    "id": "q-117",
-    "text": "Practice not-doing and everything will fall into place.",
-    "author_provided": "Anonymous",
-    "author_actual": "Lao Tzu",
-    "source": "Tao Te Ching",
-    "tags": ["wu-wei", "action", "taoism", "flow"]
-  },
-  {
-    "id": "q-118",
-    "text": "Thought plus conviction equals manifestation.",
-    "author_provided": "Anonymous",
-    "author_actual": "Anonymous",
-    "source": "",
-    "tags": ["thought", "conviction", "manifestation", "belief"]
-  },
-  {
-    "id": "q-119",
-    "text": "There is no past or future. Using tenses to divide time is like making chalk marks on water.",
-    "author_provided": "Anonymous",
-    "author_actual": "Alan Watts",
-    "source": "",
-    "tags": ["time", "past", "future", "illusion"]
-  },
-  {
-    "id": "q-120",
-    "text": "Love is what we're born with, fear is what we learn here.",
-    "author_provided": "Anonymous",
-    "author_actual": "Marianne Williamson",
-    "source": "A Return to Love",
-    "tags": ["love", "fear", "learning", "spirituality"]
-  },
-  {
-    "id": "q-121",
-    "text": "We are symbols and inhabit symbols.",
-    "author_provided": "Anonymous",
-    "author_actual": "Ralph Waldo Emerson",
-    "source": "Essays",
-    "tags": ["symbols", "meaning", "life", "language"]
-  },
-  {
-    "id": "q-122",
-    "text": "Is it fair to have given us the memory of what was and the desire of what could be when we must suffer what is?",
-    "author_provided": "Neil Jordan",
-    "author_actual": "Neil Jordan",
-    "source": "Interview with the Vampire",
-    "tags": ["suffering", "desire", "memory", "fate"]
-  },
-  {
-    "id": "q-123",
-    "text": "EGO: Edged God Out",
-    "author_provided": "Wayne Dyer",
-    "author_actual": "Wayne Dyer",
-    "source": "Common Acronym",
-    "tags": ["ego", "god", "acronym", "spirituality"]
-  },
-  {
-    "id": "q-124",
     "text": "You can either be a Host to God OR a hostage to your Ego.",
     "author_provided": "Wayne Dyer",
     "author_actual": "Wayne Dyer",
     "source": "",
-    "tags": ["god", "ego", "choice", "freedom"]
+    "tags": [
+      "choice",
+      "consciousness",
+      "ego",
+      "god",
+      "mindset",
+      "spirituality"
+    ]
   },
   {
-    "id": "q-125",
+    "id": "q-025",
     "text": "I give thanks daily, not for mere riches, but for wisdom with which to recognize, embrace, and properly use the great abundance of riches I now have at my command. I have no enemies because I injure no man for any cause, but I try to benefit all with whom I come in contact, by teaching them the way to enduring riches. I have more material wealth than I need because I am free from greed and covet only the material things I can use while I live.",
     "author_provided": "Napoleon Hill",
     "author_actual": "Napoleon Hill",
-    "source": "Think and Grow Rich",
-    "tags": ["gratitude", "wealth", "wisdom", "affirmation"]
+    "source": "Think and Grow Rich (Prayer)",
+    "tags": [
+      "abundance",
+      "affirmation",
+      "enemies",
+      "gratitude",
+      "greed",
+      "riches",
+      "service",
+      "wisdom"
+    ]
   },
   {
-    "id": "q-126",
+    "id": "q-026",
     "text": "Everything is either an opportunity to grow or an obstacle to keep you from growing. You get to choose.",
     "author_provided": "Wayne Dyer",
     "author_actual": "Wayne Dyer",
     "source": "",
-    "tags": ["growth", "obstacles", "choice", "perspective"]
+    "tags": [
+      "choice",
+      "growth",
+      "mindset",
+      "obstacles",
+      "opportunity",
+      "perspective"
+    ]
   },
   {
-    "id": "q-127",
+    "id": "q-027",
     "text": "Chase the Goddess of Wisdom and the Goddess of Wealth will chase you.",
     "author_provided": "Deepak Chopra",
     "author_actual": "Deepak Chopra's Mother",
-    "source": "Personal Story",
-    "tags": ["wisdom", "wealth", "priorities", "mythology"]
+    "source": "Story told by Deepak Chopra",
+    "tags": [
+      "hinduism",
+      "lakshmi",
+      "priority",
+      "saraswati",
+      "spirituality",
+      "wealth",
+      "wisdom"
+    ]
   },
   {
-    "id": "q-128",
+    "id": "q-028",
     "text": "Bliss = God talking to you",
     "author_provided": "Joseph Campbell",
     "author_actual": "Joseph Campbell",
-    "source": "",
-    "tags": ["bliss", "god", "spirituality", "intuition"]
+    "source": "Concept",
+    "tags": [
+      "bliss",
+      "god",
+      "intuition",
+      "joy",
+      "purpose",
+      "spirituality"
+    ]
   },
   {
-    "id": "q-129",
+    "id": "q-029",
     "text": "Our ordinary mind always tries to persuade us that we are nothing but acorns and that our greatest happiness will be to become bigger, fatter, shinier acorns; but that is of interest only to pigs. Our faith gives us knowledge of something better: that we can become oak trees.",
     "author_provided": "E.F. Schumacher",
     "author_actual": "E.F. Schumacher",
     "source": "A Guide for the Perplexed",
-    "tags": ["potential", "growth", "metaphor", "faith"]
+    "tags": [
+      "acorn",
+      "faith",
+      "growth",
+      "metaphor",
+      "mind",
+      "potential",
+      "purpose",
+      "spirituality"
+    ]
   },
   {
-    "id": "q-130",
+    "id": "q-030",
     "text": "Let me take you down, 'cause I'm going to. Strawberry fields. Nothing is real. And nothing to get hung about. Strawberry fields forever.",
     "author_provided": "The Beatles",
     "author_actual": "The Beatles",
-    "source": "Strawberry Fields Forever",
-    "tags": ["lyrics", "reality", "surrealism", "music"]
+    "source": "Strawberry Fields Forever (Song)",
+    "tags": [
+      "consciousness",
+      "lyrics",
+      "music",
+      "perception",
+      "reality",
+      "the-beatles"
+    ]
   },
   {
-    "id": "q-131",
+    "id": "q-031",
     "text": "Science without religion is lame, religion without science is blind.",
     "author_provided": "Albert Einstein",
     "author_actual": "Albert Einstein",
-    "source": "Science, Philosophy and Religion",
-    "tags": ["science", "religion", "harmony", "knowledge"]
+    "source": "Science, Philosophy and Religion: A Symposium (1941)",
+    "tags": [
+      "balance",
+      "complementary",
+      "perspective",
+      "philosophy",
+      "religion",
+      "science"
+    ]
   },
   {
-    "id": "q-132",
+    "id": "q-032",
     "text": "I am blessed and highly favored - good things are supposed to happen to me!",
     "author_provided": "Ray Jackson",
     "author_actual": "Ray Jackson",
     "source": "",
-    "tags": ["affirmation", "blessing", "optimism", "faith"]
+    "tags": [
+      "affirmation",
+      "blessed",
+      "expectation",
+      "favored",
+      "mindset",
+      "positive-thinking"
+    ]
   },
   {
-    "id": "q-133",
+    "id": "q-033",
     "text": "Money finds me easily and frequently.",
     "author_provided": "Anonymous",
     "author_actual": "Anonymous",
-    "source": "Common Affirmation",
-    "tags": ["money", "wealth", "affirmation", "ease"]
+    "source": "Common affirmation",
+    "tags": [
+      "abundance",
+      "affirmation",
+      "manifestation",
+      "mindset",
+      "money"
+    ]
+  },
+  {
+    "id": "q-034",
+    "text": "The greatest shortcoming of the human race is our inability to understand the exponential function.",
+    "author_provided": "Albert A. Bartlett",
+    "author_actual": "Albert A. Bartlett",
+    "source": "",
+    "tags": [
+      "future",
+      "humanity",
+      "math",
+      "science"
+    ]
+  },
+  {
+    "id": "q-035",
+    "text": "I love us.",
+    "author_provided": "de@",
+    "author_actual": "Deven",
+    "source": "Personal Affirmation",
+    "tags": [
+      "affirmation",
+      "love",
+      "unity"
+    ]
+  },
+  {
+    "id": "q-036",
+    "text": "Integrity is the essence of everything successful.",
+    "author_provided": "Buckminster Fuller",
+    "author_actual": "R. Buckminster Fuller",
+    "source": "",
+    "tags": [
+      "character",
+      "integrity",
+      "success",
+      "values"
+    ]
+  },
+  {
+    "id": "q-037",
+    "text": "The three most harmful addictions are heroin, carbohydrates, and a monthly salary.",
+    "author_provided": "Anonymous",
+    "author_actual": "Nassim Nicholas Taleb",
+    "source": "The Bed of Procrustes",
+    "tags": [
+      "addiction",
+      "health",
+      "independence",
+      "salary",
+      "work"
+    ]
+  },
+  {
+    "id": "q-038",
+    "text": "It’s not worth an intelligent man’s time to be in the majority. By definition, there are already enough people to do that.",
+    "author_provided": "GHHardy",
+    "author_actual": "G.H. Hardy",
+    "source": "A Mathematician's Apology",
+    "tags": [
+      "conformity",
+      "individuality",
+      "intelligence",
+      "majority"
+    ]
+  },
+  {
+    "id": "q-039",
+    "text": "Be curious, not judgmental.",
+    "author_provided": "Ted Lasso",
+    "author_actual": "Walt Whitman (Attributed)",
+    "source": "Ted Lasso (TV Show)",
+    "tags": [
+      "curiosity",
+      "judgment",
+      "kindness",
+      "mindset"
+    ],
+    "notes": "Popularized by the show Ted Lasso, who attributes it to Whitman, though Whitman likely never said it."
+  },
+  {
+    "id": "q-040",
+    "text": "Live life to the fullest. You have to color outside the lines once in a while if you want to make your life a masterpiece. Laugh some every day. Keep growing, keep dreaming, keep following your heart. The important thing is not to stop questioning.",
+    "author_provided": "Albert Einstein",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "dreams",
+      "happiness",
+      "life",
+      "questioning"
+    ],
+    "notes": "This is a pastiche of generic inspirational quotes incorrectly attributed to Einstein."
+  },
+  {
+    "id": "q-041",
+    "text": "Truth is a pathless land.",
+    "author_provided": "Krishnamurti",
+    "author_actual": "Jiddu Krishnamurti",
+    "source": "Speech (1929)",
+    "tags": [
+      "freedom",
+      "path",
+      "spirituality",
+      "truth"
+    ]
+  },
+  {
+    "id": "q-042",
+    "text": "The truth has zero maintenance costs.",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "honesty",
+      "lies",
+      "simplicity",
+      "truth"
+    ]
+  },
+  {
+    "id": "q-043",
+    "text": "Be a free thinker and don't accept everything you hear as truth. Be critical and evaluate what you believe in.",
+    "author_provided": "Aristotle",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "belief",
+      "critical-thinking",
+      "thinking",
+      "truth"
+    ],
+    "notes": "Unlikely to be a genuine Aristotle quote."
+  },
+  {
+    "id": "q-044",
+    "text": "Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has.",
+    "author_provided": "Margaret Mead",
+    "author_actual": "Margaret Mead",
+    "source": "",
+    "tags": [
+      "activism",
+      "change",
+      "community",
+      "leadership"
+    ]
+  },
+  {
+    "id": "q-045",
+    "text": "Train yourself to let go of everything you fear to lose.",
+    "author_provided": "Yoda",
+    "author_actual": "George Lucas",
+    "source": "Star Wars: Revenge of the Sith",
+    "tags": [
+      "attachment",
+      "fear",
+      "jedi",
+      "letting-go"
+    ]
+  },
+  {
+    "id": "q-046",
+    "text": "It's easier to fool people than to convince them that they have been fooled.",
+    "author_provided": "Mark Twain",
+    "author_actual": "Mark Twain (Attributed)",
+    "source": "",
+    "tags": [
+      "belief",
+      "deception",
+      "human-nature",
+      "pride"
+    ]
+  },
+  {
+    "id": "q-047",
+    "text": "The illiterate of the twenty-first century will not be those who cannot read and write, but those who cannot learn, unlearn, and relearn.",
+    "author_provided": "ALVIN TOFFLER",
+    "author_actual": "Alvin Toffler",
+    "source": "Future Shock",
+    "tags": [
+      "adaptation",
+      "future",
+      "growth",
+      "learning"
+    ]
+  },
+  {
+    "id": "q-048",
+    "text": "Great minds discuss ideas; average minds discuss events; small minds discuss people.",
+    "author_provided": "Eleanor Roosevelt",
+    "author_actual": "Eleanor Roosevelt",
+    "source": "",
+    "tags": [
+      "conversation",
+      "gossip",
+      "ideas",
+      "mind"
+    ]
+  },
+  {
+    "id": "q-049",
+    "text": "As the most intelligent form of life on this Earth, humans are the only ones that have to pay to live here. Does that not strike you as odd?",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "economics",
+      "nature",
+      "perspective",
+      "society"
+    ]
+  },
+  {
+    "id": "q-050",
+    "text": "The only thing new in the world is the history you do not know.",
+    "author_provided": "Harry S. Truman",
+    "author_actual": "Harry S. Truman",
+    "source": "",
+    "tags": [
+      "history",
+      "knowledge",
+      "learning",
+      "perspective"
+    ]
+  },
+  {
+    "id": "q-051",
+    "text": "I Am the universe.",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "Affirmation",
+    "tags": [
+      "affirmation",
+      "spirituality",
+      "unity",
+      "universe"
+    ]
+  },
+  {
+    "id": "q-052",
+    "text": "I don’t have to believe everything I think.",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "belief",
+      "meta-cognition",
+      "mindfulness",
+      "thoughts"
+    ]
+  },
+  {
+    "id": "q-053",
+    "text": "Your birth and death happened at the same time.",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "death",
+      "life",
+      "non-duality",
+      "time"
+    ]
+  },
+  {
+    "id": "q-054",
+    "text": "Intellectuals solve problems, geniuses prevent them.",
+    "author_provided": "Albert Einstein",
+    "author_actual": "Albert Einstein (Attributed)",
+    "source": "",
+    "tags": [
+      "genius",
+      "intelligence",
+      "prevention",
+      "problem-solving"
+    ]
+  },
+  {
+    "id": "q-055",
+    "text": "Broken crayons color as good as new ones.",
+    "author_provided": "Ginger",
+    "author_actual": "Ginger",
+    "source": "Personal",
+    "tags": [
+      "optimism",
+      "resilience",
+      "utility",
+      "value"
+    ]
+  },
+  {
+    "id": "q-056",
+    "text": "Embrace the present moment with gratefulness and wonder, and you will turn it into whatever you have been waiting for.",
+    "author_provided": "Neale D Walsh",
+    "author_actual": "Neale Donald Walsch",
+    "source": "",
+    "tags": [
+      "gratitude",
+      "manifestation",
+      "perspective",
+      "present-moment"
+    ]
+  },
+  {
+    "id": "q-057",
+    "text": "A flower is simply a weed with a marketing budget.",
+    "author_provided": "Anonymous",
+    "author_actual": "Rory Sutherland",
+    "source": "Alchemy",
+    "tags": [
+      "business",
+      "marketing",
+      "perception",
+      "value"
+    ]
+  },
+  {
+    "id": "q-058",
+    "text": "Some men see things as they are and say, why; I dream things that never were and say, why not.",
+    "author_provided": "George Bernard Shaw",
+    "author_actual": "George Bernard Shaw",
+    "source": "Back to Methuselah",
+    "tags": [
+      "dreams",
+      "innovation",
+      "possibility",
+      "vision"
+    ]
+  },
+  {
+    "id": "q-059",
+    "text": "The quality of your mind determines the quality of your life.",
+    "author_provided": "Sam Harris",
+    "author_actual": "Sam Harris",
+    "source": "Waking Up",
+    "tags": [
+      "consciousness",
+      "life",
+      "meditation",
+      "mind"
+    ]
+  },
+  {
+    "id": "q-060",
+    "text": "There are millions of people who carry very toxic narratives in their mind and they call it 'my life'.",
+    "author_provided": "Tolle",
+    "author_actual": "Eckhart Tolle",
+    "source": "",
+    "tags": [
+      "identity",
+      "mind",
+      "narrative",
+      "suffering"
+    ]
+  },
+  {
+    "id": "q-061",
+    "text": "Man. Because he sacrifices his health in order to make money. Then he sacrifices money to recuperate his health. And then he is so anxious about the future that he does not enjoy the present; the result being that he does not live in the present or the future; he lives as if he is never going to die, and then dies having never really lived.",
+    "author_provided": "Dalai Lama",
+    "author_actual": "James J. Lachard",
+    "source": "",
+    "tags": [
+      "health",
+      "humanity",
+      "irony",
+      "money",
+      "time"
+    ],
+    "notes": "Commonly attributed to the Dalai Lama, but likely written by James J. Lachard."
+  },
+  {
+    "id": "q-062",
+    "text": "Would you rather be right or be happy?",
+    "author_provided": "Anonymous",
+    "author_actual": "Helen Schucman",
+    "source": "A Course in Miracles",
+    "tags": [
+      "choice",
+      "conflict",
+      "ego",
+      "happiness"
+    ]
+  },
+  {
+    "id": "q-063",
+    "text": "Silence is the language of god, all else is poor translation.",
+    "author_provided": "Rumi",
+    "author_actual": "Rumi",
+    "source": "",
+    "tags": [
+      "communication",
+      "god",
+      "silence",
+      "spirituality"
+    ]
+  },
+  {
+    "id": "q-064",
+    "text": "The day science begins to study non-physical phenomena, it will make more progress in one decade than in all the previous centuries of its existence.",
+    "author_provided": "Nikola Tesla",
+    "author_actual": "Nikola Tesla (Attributed)",
+    "source": "",
+    "tags": [
+      "energy",
+      "progress",
+      "science",
+      "spirituality"
+    ]
+  },
+  {
+    "id": "q-065",
+    "text": "It is no measure of health to be well adjusted to a profoundly sick society.",
+    "author_provided": "Jiddu Krishnamurti",
+    "author_actual": "Jiddu Krishnamurti",
+    "source": "",
+    "tags": [
+      "conformity",
+      "health",
+      "sanity",
+      "society"
+    ]
+  },
+  {
+    "id": "q-066",
+    "text": "The time to fix the roof is when the sun is shining.",
+    "author_provided": "John F Kennedy",
+    "author_actual": "John F. Kennedy",
+    "source": "State of the Union (1962)",
+    "tags": [
+      "action",
+      "preparation",
+      "prudence",
+      "timing"
+    ]
+  },
+  {
+    "id": "q-067",
+    "text": "Our infinite potential exists just on the other side of our discomfort zone.",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "courage",
+      "discomfort",
+      "growth",
+      "potential"
+    ]
+  },
+  {
+    "id": "q-068",
+    "text": "Faith and Fear ask of you the same thing - to believe in something unseen.",
+    "author_provided": "Theo/Jesus",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "belief",
+      "faith",
+      "fear",
+      "perspective"
+    ]
+  },
+  {
+    "id": "q-069",
+    "text": "Life isn't as serious as my mind makes it out to be.",
+    "author_provided": "Eckhart Tolle",
+    "author_actual": "Eckhart Tolle",
+    "source": "",
+    "tags": [
+      "ego",
+      "life",
+      "mind",
+      "seriousness"
+    ]
+  },
+  {
+    "id": "q-070",
+    "text": "The only thing that interferes with my learning is my education.",
+    "author_provided": "Albert Einstein",
+    "author_actual": "Albert Einstein",
+    "source": "",
+    "tags": [
+      "education",
+      "knowledge",
+      "learning",
+      "schooling"
+    ]
+  },
+  {
+    "id": "q-071",
+    "text": "The ancestor of every action is a thought.",
+    "author_provided": "Emerson",
+    "author_actual": "Ralph Waldo Emerson",
+    "source": "Essays: First Series",
+    "tags": [
+      "action",
+      "cause-and-effect",
+      "manifestation",
+      "thought"
+    ]
+  },
+  {
+    "id": "q-072",
+    "text": "From the very forest itself comes the handle of the axe that fells it.",
+    "author_provided": "TB Sanhedrin 39b",
+    "author_actual": "The Talmud",
+    "source": "Sanhedrin 39b",
+    "tags": [
+      "irony",
+      "origin",
+      "self-destruction",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "q-073",
+    "text": "We are slaves to whatever we don’t understand.",
+    "author_provided": "Vernon Howard",
+    "author_actual": "Vernon Howard",
+    "source": "",
+    "tags": [
+      "freedom",
+      "ignorance",
+      "slavery",
+      "understanding"
+    ]
+  },
+  {
+    "id": "q-074",
+    "text": "What you resist persists, and that what you think about, you bring about.",
+    "author_provided": "Anonymous",
+    "author_actual": "Carl Jung (Concept)",
+    "source": "",
+    "tags": [
+      "focus",
+      "manifestation",
+      "psychology",
+      "resistance"
+    ]
+  },
+  {
+    "id": "q-075",
+    "text": "The basis of life is absolute freedom. The objective of life is absolute joy. The result of life is absolute growth.",
+    "author_provided": "Esther Hicks",
+    "author_actual": "Abraham-Hicks",
+    "source": "",
+    "tags": [
+      "freedom",
+      "growth",
+      "joy",
+      "purpose"
+    ]
+  },
+  {
+    "id": "q-076",
+    "text": "The purpose of life is to know and express Who You Are. If you do other than that during the days and times of your life, you will have not used those days and times in a way that profits your soul. It is soul profit we are after here, not body profit.",
+    "author_provided": "Neale Walsh",
+    "author_actual": "Neale Donald Walsch",
+    "source": "Conversations with God",
+    "tags": [
+      "expression",
+      "life",
+      "purpose",
+      "soul"
+    ]
+  },
+  {
+    "id": "q-077",
+    "text": "I completely trust my Infinite Self to do Anything in this lifetime.",
+    "author_provided": "de",
+    "author_actual": "Deven",
+    "source": "Personal Affirmation",
+    "tags": [
+      "affirmation",
+      "infinite",
+      "self",
+      "trust"
+    ]
+  },
+  {
+    "id": "q-078",
+    "text": "Beliefs are the master plan used to create your reality.",
+    "author_provided": "Mira Kelly",
+    "author_actual": "Mira Kelley",
+    "source": "",
+    "tags": [
+      "beliefs",
+      "creation",
+      "manifestation",
+      "reality"
+    ]
+  },
+  {
+    "id": "q-079",
+    "text": "Money can buy you a fine dog, but only love can make him wag his tail.",
+    "author_provided": "Kinky Friedman",
+    "author_actual": "Kinky Friedman",
+    "source": "",
+    "tags": [
+      "happiness",
+      "love",
+      "money",
+      "value"
+    ]
+  },
+  {
+    "id": "q-080",
+    "text": "Miracles seldom occur in the lives of those who do not consider them possible.",
+    "author_provided": "Neale Donald Walsh",
+    "author_actual": "Neale Donald Walsch",
+    "source": "",
+    "tags": [
+      "belief",
+      "mindset",
+      "miracles",
+      "possibility"
+    ]
+  },
+  {
+    "id": "q-081",
+    "text": "The Lamps are different, but the LIGHT is the same.",
+    "author_provided": "Rumi",
+    "author_actual": "Rumi",
+    "source": "",
+    "tags": [
+      "diversity",
+      "light",
+      "spirituality",
+      "unity"
+    ]
+  },
+  {
+    "id": "q-082",
+    "text": "I dwell in possibility.",
+    "author_provided": "Emily Dickinson",
+    "author_actual": "Emily Dickinson",
+    "source": "Poetry",
+    "tags": [
+      "hope",
+      "imagination",
+      "poetry",
+      "possibility"
+    ]
+  },
+  {
+    "id": "q-083",
+    "text": "Those who danced were thought insane by those who could not hear the music.",
+    "author_provided": "Friedrich Nietzsche",
+    "author_actual": "Angela Monet",
+    "source": "",
+    "tags": [
+      "insanity",
+      "judgment",
+      "music",
+      "perception"
+    ],
+    "notes": "Often attributed to Nietzsche, but the earliest source is Angela Monet."
+  },
+  {
+    "id": "q-084",
+    "text": "Love is metaphysical gravity.",
+    "author_provided": "Bucky Fuller",
+    "author_actual": "R. Buckminster Fuller",
+    "source": "",
+    "tags": [
+      "connection",
+      "gravity",
+      "love",
+      "physics"
+    ]
+  },
+  {
+    "id": "q-085",
+    "text": "There are only two mistakes one can make along the road to truth; not going all the way, and not starting.",
+    "author_provided": "Buddha",
+    "author_actual": "Buddha",
+    "source": "",
+    "tags": [
+      "action",
+      "mistakes",
+      "persistence",
+      "truth"
+    ]
+  },
+  {
+    "id": "q-086",
+    "text": "The great secret is a controlled imagination and a well-sustained attention firmly and repeatedly focused on the feeling of the wish fulfilled until it fills the mind and crowds all other ideas out of consciousness.",
+    "author_provided": "Neville Goddard",
+    "author_actual": "Neville Goddard",
+    "source": "",
+    "tags": [
+      "consciousness",
+      "focus",
+      "imagination",
+      "manifestation"
+    ]
+  },
+  {
+    "id": "q-087",
+    "text": "At the center of your being you have the answer; you know who you are and you know what you want.",
+    "author_provided": "Lao Tsu",
+    "author_actual": "Lao Tzu",
+    "source": "",
+    "tags": [
+      "answers",
+      "being",
+      "intuition",
+      "self-knowledge"
+    ]
+  },
+  {
+    "id": "q-088",
+    "text": "You see, to go out of your mind, at least once a day, is tremendously important because by going out of your mind you will come to your senses.",
+    "author_provided": "Alan Watts",
+    "author_actual": "Alan Watts",
+    "source": "",
+    "tags": [
+      "consciousness",
+      "mind",
+      "perspective",
+      "sanity"
+    ]
+  },
+  {
+    "id": "q-089",
+    "text": "We are not human beings having a spiritual experience. We are spiritual beings having a human experience.",
+    "author_provided": "Pierre Teilhard de Chardin",
+    "author_actual": "Pierre Teilhard de Chardin",
+    "source": "",
+    "tags": [
+      "being",
+      "humanity",
+      "perspective",
+      "spirituality"
+    ]
+  },
+  {
+    "id": "q-090",
+    "text": "Fall in love with your work, writing.",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "love",
+      "passion",
+      "work",
+      "writing"
+    ]
+  },
+  {
+    "id": "q-091",
+    "text": "Religion is for people who are scared to go to hell. Spirituality is for people who have already been there.",
+    "author_provided": "Bonnie Raitt",
+    "author_actual": "Vine Deloria Jr.",
+    "source": "",
+    "tags": [
+      "growth",
+      "hell",
+      "religion",
+      "spirituality"
+    ],
+    "notes": "Often credited to Bonnie Raitt, but originally Vine Deloria Jr."
+  },
+  {
+    "id": "q-092",
+    "text": "Science advances one death at a time.",
+    "author_provided": "Anonymous",
+    "author_actual": "Max Planck",
+    "source": "Scientific Autobiography",
+    "tags": [
+      "change",
+      "paradigms",
+      "progress",
+      "science"
+    ],
+    "notes": "Paraphrase of Planck's Principle."
+  },
+  {
+    "id": "q-093",
+    "text": "In the age of information, ignorance is a choice.",
+    "author_provided": "Donny Miller",
+    "author_actual": "Donny Miller",
+    "source": "",
+    "tags": [
+      "choice",
+      "ignorance",
+      "information",
+      "learning"
+    ]
+  },
+  {
+    "id": "q-094",
+    "text": "The more you are willing to just let the world be something you’re aware of, the more it will let you be who you are— the awareness, the Self, the Atman, the Soul.",
+    "author_provided": "Michael Singer",
+    "author_actual": "Michael Singer",
+    "source": "The Untethered Soul",
+    "tags": [
+      "awareness",
+      "self",
+      "soul",
+      "surrender"
+    ]
+  },
+  {
+    "id": "q-095",
+    "text": "The opposite of a correct statement is a false statement. But the opposite of a profound truth may well be another profound truth.",
+    "author_provided": "Niels Bohr",
+    "author_actual": "Niels Bohr",
+    "source": "",
+    "tags": [
+      "paradox",
+      "perspective",
+      "truth",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "q-096",
+    "text": "I believe that banking institutions are more dangerous to our liberties than standing armies.",
+    "author_provided": "Thomas Jefferson",
+    "author_actual": "Thomas Jefferson (Spurious)",
+    "source": "",
+    "tags": [
+      "banking",
+      "liberty",
+      "money",
+      "politics"
+    ],
+    "notes": "This quote is widely considered spurious or misattributed."
+  },
+  {
+    "id": "q-097",
+    "text": "The secret of change is to focus all of your energy, not on fighting the old, but on building the new.",
+    "author_provided": "Socrates",
+    "author_actual": "Dan Millman",
+    "source": "Way of the Peaceful Warrior",
+    "tags": [
+      "change",
+      "energy",
+      "focus",
+      "growth"
+    ],
+    "notes": "Often misattributed to the philosopher Socrates; it is from a character named Socrates in Dan Millman's book."
+  },
+  {
+    "id": "q-098",
+    "text": "It's not what you look at that matters, it's what you see.",
+    "author_provided": "Henry David Thoreau",
+    "author_actual": "Henry David Thoreau",
+    "source": "",
+    "tags": [
+      "mind",
+      "perception",
+      "perspective",
+      "vision"
+    ]
+  },
+  {
+    "id": "q-099",
+    "text": "Your vision will become clear only when you look into your heart. Who looks outside, dreams. Who looks inside, awakens.",
+    "author_provided": "Carl Jung",
+    "author_actual": "Carl Jung",
+    "source": "Letters",
+    "tags": [
+      "awakening",
+      "heart",
+      "introspection",
+      "vision"
+    ]
+  },
+  {
+    "id": "q-100",
+    "text": "If you want to find the secrets of the universe, think in terms of energy, frequency and vibration.",
+    "author_provided": "Nikola Tesla",
+    "author_actual": "Nikola Tesla (Attributed)",
+    "source": "",
+    "tags": [
+      "energy",
+      "physics",
+      "universe",
+      "vibration"
+    ]
+  },
+  {
+    "id": "q-101",
+    "text": "If you only knew the magnificence of the 3, 6 and 9, then you would have the key to the universe.",
+    "author_provided": "Nikola Tesla",
+    "author_actual": "Nikola Tesla (Attributed)",
+    "source": "",
+    "tags": [
+      "math",
+      "mystery",
+      "numbers",
+      "universe"
+    ]
+  },
+  {
+    "id": "q-102",
+    "text": "If we have any pain in us at all, it means we have something to forgive.",
+    "author_provided": "Sculptor in the Sky",
+    "author_actual": "Teal Swan",
+    "source": "The Sculptor in the Sky",
+    "tags": [
+      "emotion",
+      "forgiveness",
+      "healing",
+      "pain"
+    ]
+  },
+  {
+    "id": "q-103",
+    "text": "Every great architect is - necessarily - a great poet. He must be a great original interpreter of his time, his day, his age.",
+    "author_provided": "Frank Lloyd Wright",
+    "author_actual": "Frank Lloyd Wright",
+    "source": "",
+    "tags": [
+      "architecture",
+      "art",
+      "creativity",
+      "poetry"
+    ]
+  },
+  {
+    "id": "q-104",
+    "text": "An investment in knowledge always pays the best interest.",
+    "author_provided": "Benjamin Franklin",
+    "author_actual": "Benjamin Franklin",
+    "source": "The Way to Wealth",
+    "tags": [
+      "investment",
+      "knowledge",
+      "learning",
+      "value"
+    ]
+  },
+  {
+    "id": "q-105",
+    "text": "If you take your time, Deven, you'll have more of it.",
+    "author_provided": "The Universe",
+    "author_actual": "Mike Dooley",
+    "source": "Notes from the Universe",
+    "tags": [
+      "life",
+      "patience",
+      "perspective",
+      "time"
+    ]
+  },
+  {
+    "id": "q-106",
+    "text": "Make Bliss my Life's Purpose.",
+    "author_provided": "Deven",
+    "author_actual": "Deven",
+    "source": "Personal Affirmation",
+    "tags": [
+      "affirmation",
+      "bliss",
+      "life",
+      "purpose"
+    ]
+  },
+  {
+    "id": "q-107",
+    "text": "It's not hard to make decisions when you know what your values are.",
+    "author_provided": "Roy E. Disney",
+    "author_actual": "Roy E. Disney",
+    "source": "",
+    "tags": [
+      "clarity",
+      "decisions",
+      "integrity",
+      "values"
+    ]
+  },
+  {
+    "id": "q-108",
+    "text": "The Universe doesn't hear what you say, the Universe hears what you mean.",
+    "author_provided": "Abraham",
+    "author_actual": "Abraham-Hicks",
+    "source": "",
+    "tags": [
+      "intention",
+      "manifestation",
+      "universe",
+      "vibration"
+    ]
+  },
+  {
+    "id": "q-109",
+    "text": "I AM the resurrection and the life in thought and feeling.",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "Biblical / Affirmation",
+    "tags": [
+      "affirmation",
+      "life",
+      "resurrection",
+      "spirituality"
+    ]
+  },
+  {
+    "id": "q-110",
+    "text": "Man's concept of himself determines the world in which he lives.",
+    "author_provided": "Neville",
+    "author_actual": "Neville Goddard",
+    "source": "",
+    "tags": [
+      "manifestation",
+      "mind",
+      "reality",
+      "self-concept"
+    ]
+  },
+  {
+    "id": "q-111",
+    "text": "Accept whatever comes to you woven in the pattern of your destiny, for what could more aptly fit your needs?",
+    "author_provided": "Marcus Aurelius",
+    "author_actual": "Marcus Aurelius",
+    "source": "Meditations",
+    "tags": [
+      "acceptance",
+      "destiny",
+      "fate",
+      "stoicism"
+    ]
+  },
+  {
+    "id": "q-112",
+    "text": "All riches have their origin in mind. Wealth is in ideas - not money.",
+    "author_provided": "Robert Collier",
+    "author_actual": "Robert Collier",
+    "source": "",
+    "tags": [
+      "ideas",
+      "mind",
+      "riches",
+      "wealth"
+    ]
+  },
+  {
+    "id": "q-113",
+    "text": "If one advances confidently in the direction of his dreams, and endeavors to live the life which he has imagined, he will meet with a success unexpected in common hours.",
+    "author_provided": "Henry David Thoreau",
+    "author_actual": "Henry David Thoreau",
+    "source": "Walden",
+    "tags": [
+      "action",
+      "confidence",
+      "dreams",
+      "success"
+    ]
+  },
+  {
+    "id": "q-114",
+    "text": "The highest form of knowledge is to know who you are.",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "identity",
+      "knowledge",
+      "self-knowledge",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "q-115",
+    "text": "Forgiveness is the fragrance that the violet sheds on the heel that has crushed it.",
+    "author_provided": "Mark Twain",
+    "author_actual": "Mark Twain",
+    "source": "",
+    "tags": [
+      "forgiveness",
+      "grace",
+      "kindness",
+      "metaphor"
+    ]
+  },
+  {
+    "id": "q-116",
+    "text": "If the highest aim of a captain were to preserve his ship, he would keep it in port forever.",
+    "author_provided": "St. Thomas Aquinas",
+    "author_actual": "St. Thomas Aquinas",
+    "source": "",
+    "tags": [
+      "action",
+      "courage",
+      "purpose",
+      "risk"
+    ]
+  },
+  {
+    "id": "q-117",
+    "text": "I am whole, perfect, strong, powerful, loving, harmonious, prosperous and happy.",
+    "author_provided": "Charles F. Haanel",
+    "author_actual": "Charles F. Haanel",
+    "source": "The Master Key System",
+    "tags": [
+      "affirmation",
+      "mindset",
+      "perfection",
+      "power"
+    ]
+  },
+  {
+    "id": "q-118",
+    "text": "Manage your energy, not your time.",
+    "author_provided": "Tony Schwartz",
+    "author_actual": "Tony Schwartz",
+    "source": "The Power of Full Engagement",
+    "tags": [
+      "energy",
+      "management",
+      "productivity",
+      "time"
+    ]
+  },
+  {
+    "id": "q-119",
+    "text": "Have a Mind that is Open to Everything and Attached to Nothing.",
+    "author_provided": "Wayne Dyer",
+    "author_actual": "Tilopa (Adaptation)",
+    "source": "",
+    "tags": [
+      "buddhism",
+      "detachment",
+      "mind",
+      "open-mindedness"
+    ],
+    "notes": "Often used by Wayne Dyer, but based on the teachings of Tilopa."
+  },
+  {
+    "id": "q-120",
+    "text": "Change is inevitable but learning is optional.",
+    "author_provided": "Anonymous",
+    "author_actual": "John C. Maxwell",
+    "source": "",
+    "tags": [
+      "change",
+      "choice",
+      "growth",
+      "learning"
+    ]
+  },
+  {
+    "id": "q-121",
+    "text": "You're only aware of the reality you choose to observe.",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "choice",
+      "observation",
+      "perception",
+      "reality"
+    ]
+  },
+  {
+    "id": "q-122",
+    "text": "Nothing real can be threatened. Nothing unreal exists.",
+    "author_provided": "Anonymous",
+    "author_actual": "Helen Schucman",
+    "source": "A Course in Miracles",
+    "tags": [
+      "illusion",
+      "reality",
+      "spirituality",
+      "truth"
+    ]
+  },
+  {
+    "id": "q-123",
+    "text": "The world as you know it is a picture of your expectations.",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "expectations",
+      "mind",
+      "perception",
+      "world"
+    ]
+  },
+  {
+    "id": "q-124",
+    "text": "Belief structures reality!",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "belief",
+      "manifestation",
+      "reality",
+      "structure"
+    ]
+  },
+  {
+    "id": "q-125",
+    "text": "All The Truths of All the Worlds are written all around, and inside us. It only takes the eyes to see.",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "nature",
+      "perception",
+      "truth",
+      "wisdom"
+    ]
+  },
+  {
+    "id": "q-126",
+    "text": "I hear and I forget. I see and I remember. I do and I understand.",
+    "author_provided": "Confucius",
+    "author_actual": "Confucius",
+    "source": "",
+    "tags": [
+      "action",
+      "experience",
+      "learning",
+      "understanding"
+    ]
+  },
+  {
+    "id": "q-127",
+    "text": "Too many people spend money they haven't earned, to buy things they don't want, to impress people they don't like.",
+    "author_provided": "Will Rogers",
+    "author_actual": "Will Rogers",
+    "source": "",
+    "tags": [
+      "impressions",
+      "materialism",
+      "money",
+      "society"
+    ]
+  },
+  {
+    "id": "q-128",
+    "text": "Practice not-doing and everything will fall into place.",
+    "author_provided": "Anonymous",
+    "author_actual": "Lao Tzu",
+    "source": "Tao Te Ching",
+    "tags": [
+      "action",
+      "flow",
+      "taoism",
+      "wu-wei"
+    ]
+  },
+  {
+    "id": "q-129",
+    "text": "Thought plus conviction equals manifestation.",
+    "author_provided": "Anonymous",
+    "author_actual": "Anonymous",
+    "source": "",
+    "tags": [
+      "belief",
+      "conviction",
+      "manifestation",
+      "thought"
+    ]
+  },
+  {
+    "id": "q-130",
+    "text": "There is no past or future. Using tenses to divide time is like making chalk marks on water.",
+    "author_provided": "Anonymous",
+    "author_actual": "Alan Watts",
+    "source": "",
+    "tags": [
+      "future",
+      "illusion",
+      "past",
+      "time"
+    ]
+  },
+  {
+    "id": "q-131",
+    "text": "Love is what we're born with, fear is what we learn here.",
+    "author_provided": "Anonymous",
+    "author_actual": "Marianne Williamson",
+    "source": "A Return to Love",
+    "tags": [
+      "fear",
+      "learning",
+      "love",
+      "spirituality"
+    ]
+  },
+  {
+    "id": "q-132",
+    "text": "We are symbols and inhabit symbols.",
+    "author_provided": "Anonymous",
+    "author_actual": "Ralph Waldo Emerson",
+    "source": "Essays",
+    "tags": [
+      "language",
+      "life",
+      "meaning",
+      "symbols"
+    ]
+  },
+  {
+    "id": "q-133",
+    "text": "Is it fair to have given us the memory of what was and the desire of what could be when we must suffer what is?",
+    "author_provided": "Neil Jordan",
+    "author_actual": "Neil Jordan",
+    "source": "Interview with the Vampire",
+    "tags": [
+      "desire",
+      "fate",
+      "memory",
+      "suffering"
+    ]
+  },
+  {
+    "id": "q-134",
+    "text": "Let a hundred flowers bloom, let a hundred schools of thought contend.",
+    "author_provided": null,
+    "author_actual": "Mao Zedong",
+    "source": "Speech at the Supreme State Conference (May 2, 1956), though not published until 1957.",
+    "tags": [
+      "diversity",
+      "expression",
+      "freedom",
+      "politics",
+      "society"
+    ]
+  },
+  {
+    "id": "q-135",
+    "text": "The reasonable man adapts himself to the world; the unreasonable one persists in trying to adapt the world to himself. Therefore all progress depends on the unreasonable man.",
+    "author_provided": null,
+    "author_actual": "George Bernard Shaw",
+    "source": "Man and Superman (1903)",
+    "tags": [
+      "adaptation",
+      "change",
+      "individuality",
+      "progress",
+      "reason"
+    ]
+  },
+  {
+    "id": "q-136",
+    "text": "Reality is merely an illusion, albeit a very persistent one.",
+    "author_provided": null,
+    "author_actual": "Albert Einstein",
+    "source": "Attributed quote, often repeated in various publications",
+    "tags": [
+      "illusion",
+      "mind",
+      "perception",
+      "philosophy",
+      "reality"
+    ]
+  },
+  {
+    "id": "q-137",
+    "text": "Where attention goes, energy flows; where intention goes, energy flows!",
+    "author_provided": null,
+    "author_actual": "T. Harv Eker",
+    "source": "Secrets of the Millionaire Mind: Mastering the Inner Game of Wealth (2005)",
+    "tags": [
+      "attention",
+      "energy",
+      "focus",
+      "intention",
+      "wealth"
+    ]
+  },
+  {
+    "id": "q-138",
+    "text": "When you change the way you look at things, the things you look at change.",
+    "author_provided": null,
+    "author_actual": "Wayne Dyer",
+    "source": "Often attributed to Wayne Dyer; its original source is difficult to pinpoint but Dyer popularized it.",
+    "tags": [
+      "change",
+      "mindset",
+      "perception",
+      "perspective",
+      "thinking"
+    ]
+  },
+  {
+    "id": "q-139",
+    "text": "If you want to find the secrets of the universe, think in terms of energy, frequency and vibration.",
+    "author_provided": "Nikola Tesla",
+    "author_actual": "Nikola Tesla",
+    "source": "Attributed quote, although its exact original source is debated. It reflects Tesla's general thinking and writings on physics and the universe.",
+    "tags": [
+      "energy",
+      "frequency",
+      "physics",
+      "universe",
+      "vibration"
+    ]
+  },
+  {
+    "id": "q-140",
+    "text": "As a species, we are in a constant state of amnesia.",
+    "author_provided": null,
+    "author_actual": "Graham Hancock",
+    "source": "War God: Nights of the Witch (2013)",
+    "tags": [
+      "consciousness",
+      "history",
+      "humanity",
+      "memory",
+      "society"
+    ]
+  },
+  {
+    "id": "q-141",
+    "text": "Compound interest is the eighth wonder of the world. He who understands it, earns it ... he who doesn't ... pays it.",
+    "author_provided": null,
+    "author_actual": "Often attributed to Albert Einstein, but this is likely a misattribution.",
+    "source": "The origin of this quote is uncertain. It's widely attributed to Albert Einstein, but there's no reliable evidence he said or wrote it. Some sources suggest it may have originated with others prior to Einstein.",
+    "tags": [
+      "compound interest",
+      "economics",
+      "investment",
+      "money",
+      "wealth"
+    ]
+  },
+  {
+    "id": "q-142",
+    "text": "I will be who I will be",
+    "author_provided": null,
+    "author_actual": "God",
+    "source": "Exodus 3:14 (King James Version)",
+    "tags": [
+      "being",
+      "god",
+      "identity",
+      "self",
+      "self-concept"
+    ]
+  },
+  {
+    "id": "q-143",
+    "text": "A goal without a plan is just a wish.",
+    "author_provided": null,
+    "author_actual": "Antoine de Saint-Exupéry (attributed)",
+    "source": "Commonly attributed to Antoine de Saint-Exupéry, although a definitive source is difficult to pinpoint within his published works. It captures the sentiment found in his writings on action and purpose.",
+    "tags": [
+      "action",
+      "goal",
+      "intention",
+      "plan",
+      "purpose"
+    ]
+  },
+  {
+    "id": "q-144",
+    "text": "A master thinks only about what he intends to manifest.",
+    "author_provided": null,
+    "author_actual": "Unknown",
+    "source": "Attributed to various self-help and new age sources; likely a modern paraphrase or synthesis of similar concepts.",
+    "tags": [
+      "intention",
+      "manifestation",
+      "mastery",
+      "mindset",
+      "thoughts"
+    ]
+  },
+  {
+    "id": "q-145",
+    "text": "Whether you think you can, or you think you can't – you're right.",
+    "author_provided": null,
+    "author_actual": "Henry Ford",
+    "source": "Allegedly from his biography or various writings and speeches, though the exact origin is debated.",
+    "tags": [
+      "belief",
+      "mindset",
+      "positive-thinking",
+      "self-concept",
+      "self-fulfilling prophecy"
+    ]
+  },
+  {
+    "id": "q-146",
+    "text": "I am not what happened to me, I am what I choose to become.",
+    "author_provided": null,
+    "author_actual": "Carl Gustav Jung",
+    "source": "Attributed, but difficult to verify exact original source. The sentiment aligns with Jungian psychology principles.",
+    "tags": [
+      "choice",
+      "identity",
+      "psychology",
+      "responsibility",
+      "self-creation"
+    ]
+  },
+  {
+    "id": "q-147",
+    "text": "All our dreams can come true, if we have the courage to pursue them.",
+    "author_provided": null,
+    "author_actual": "Walt Disney",
+    "source": "Attributed quote, origin uncertain",
+    "tags": [
+      "action",
+      "courage",
+      "dreams",
+      "persistence",
+      "success"
+    ]
+  },
+  {
+    "id": "q-148",
+    "text": "The highest form of ignorance is when you reject something you don't know anything about.",
+    "author_provided": null,
+    "author_actual": "Wayne Dyer",
+    "source": "",
+    "tags": [
+      "ignorance",
+      "judgment",
+      "knowledge",
+      "open-mindedness",
+      "understanding"
+    ]
   }
 ]

@@ -1,6 +1,6 @@
 {
   "name": "web",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "migrate": "tsx scripts/migrate.ts",
-    "import-quotes": "tsx scripts/import-quotes.ts"
+    "import-quotes": "tsx scripts/import-quotes.ts",
+    "export-quotes": "tsx scripts/export-quotes.ts",
+    "export-quotes:md": "tsx scripts/export-quotes.ts --markdown"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
