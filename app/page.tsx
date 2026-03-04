@@ -2,7 +2,7 @@
 
 import { useMemo, useState, useEffect } from "react";
 import { ModeToggle } from "@/components/ui/ModeToggle";
-import { Search, Copy, Check, BookOpen, Sparkles, RotateCcw, Info, X, Shuffle } from "lucide-react";
+import { Search, Copy, Check, BookOpen, Sparkles, RotateCcw, Info, X, Shuffle, Share2, Link } from "lucide-react";
 
 export type Quote = {
   id: string;
@@ -111,6 +111,7 @@ const ReaderModal = ({
 }) => {
   const [relatedByAuthor, setRelatedByAuthor] = useState<Quote[]>([]);
   const [relatedByTag, setRelatedByTag] = useState<Quote[]>([]);
+  const [linkCopied, setLinkCopied] = useState(false);
 
   useEffect(() => {
     if (quote.authorActual) {
@@ -126,15 +127,55 @@ const ReaderModal = ({
     }
   }, [quote]);
 
+  const handleShare = async () => {
+    const shareUrl = `${window.location.origin}/?quote=${quote.id}`;
+    const shareData = {
+      title: `Quote by ${quote.authorActual || "Unknown"}`,
+      text: `"${quote.text}" — ${quote.authorActual || "Unknown"}`,
+      url: shareUrl,
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch {
+        // User cancelled or share failed — ignore
+      }
+    } else {
+      await navigator.clipboard.writeText(shareUrl);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    }
+  };
+
   return (
     <div className="fixed inset-0 z-20 flex items-center justify-center bg-black/40 p-4 backdrop-blur">
       <div className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-3xl bg-white p-8 shadow-2xl dark:bg-slate-950">
-        <button
-          onClick={onClose}
-          className="absolute right-4 top-4 rounded-full bg-slate-100 px-3 py-1 text-sm font-semibold text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
-        >
-          Close
-        </button>
+        <div className="absolute right-4 top-4 flex items-center gap-2">
+          <button
+            onClick={handleShare}
+            className="rounded-full bg-slate-100 px-3 py-1 text-sm font-semibold text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 inline-flex items-center gap-1.5"
+            title="Share this quote"
+          >
+            {linkCopied ? (
+              <>
+                <Check className="h-3.5 w-3.5 text-green-500" />
+                Copied!
+              </>
+            ) : (
+              <>
+                <Share2 className="h-3.5 w-3.5" />
+                Share
+              </>
+            )}
+          </button>
+          <button
+            onClick={onClose}
+            className="rounded-full bg-slate-100 px-3 py-1 text-sm font-semibold text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
+          >
+            Close
+          </button>
+        </div>
         <p className="text-2xl leading-relaxed text-slate-900 dark:text-slate-50 font-serif">“{quote.text}”</p>
         <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-slate-600">
           <span className="rounded-full bg-slate-900 px-3 py-1 font-semibold text-white dark:bg-slate-50 dark:text-slate-900">
@@ -199,10 +240,31 @@ export default function Home() {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedAuthors, setSelectedAuthors] = useState<string[]>([]);
   const [activeQuoteId, setActiveQuoteId] = useState<string | null>(null);
+  const [sharedQuote, setSharedQuote] = useState<Quote | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+
+  // Read ?quote= param on mount and fetch that specific quote
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const quoteId = params.get("quote");
+    if (quoteId && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(quoteId)) {
+      fetch(`/api/quotes/${quoteId}`)
+        .then((res) => {
+          if (!res.ok) throw new Error("Not found");
+          return res.json();
+        })
+        .then((quote: Quote) => {
+          setSharedQuote(quote);
+          setActiveQuoteId(quote.id);
+        })
+        .catch(() => {
+          // Invalid or missing quote — load site normally
+        });
+    }
+  }, []);
 
   useEffect(() => {
     const queryParams = new URLSearchParams();
@@ -231,9 +293,38 @@ export default function Home() {
 
 
   const activeQuote = useMemo(
-    () => quotes.find((quote) => quote.id === activeQuoteId) ?? null,
-    [activeQuoteId, quotes],
+    () => {
+      if (!activeQuoteId) return null;
+      // Check loaded quotes first, then fall back to the shared quote fetched via URL
+      return quotes.find((q) => q.id === activeQuoteId) ?? sharedQuote ?? null;
+    },
+    [activeQuoteId, quotes, sharedQuote],
   );
+
+  // Update browser URL when modal opens/closes
+  useEffect(() => {
+    if (activeQuoteId) {
+      window.history.pushState(null, "", `/?quote=${activeQuoteId}`);
+    } else {
+      // Only replace state if URL currently has a quote param
+      const params = new URLSearchParams(window.location.search);
+      if (params.has("quote")) {
+        window.history.replaceState(null, "", "/");
+      }
+    }
+  }, [activeQuoteId]);
+
+  // Handle browser back button to close modal
+  useEffect(() => {
+    const handlePopState = () => {
+      const params = new URLSearchParams(window.location.search);
+      if (!params.has("quote")) {
+        setActiveQuoteId(null);
+      }
+    };
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
 
   const toggleTag = (tag: string) => {
     setSelectedTags((prev) =>
