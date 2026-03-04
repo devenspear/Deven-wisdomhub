@@ -189,6 +189,8 @@ const ReaderModal = ({
   );
 };
 
+const PAGE_SIZE = 24;
+
 export default function Home() {
   const [quotes, setQuotes] = useState<Quote[]>([]);
   const [allAuthors, setAllAuthors] = useState<Author[]>([]);
@@ -200,6 +202,7 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [isFiltersOpen, setIsFiltersOpen] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   useEffect(() => {
     const queryParams = new URLSearchParams();
@@ -210,17 +213,21 @@ export default function Home() {
     fetch(`/api/quotes?${queryParams.toString()}`)
       .then(res => res.json())
       .then(data => {
-        // Auto-shuffle quotes on every load for a fresh experience
+        if (!Array.isArray(data)) { setQuotes([]); setIsLoading(false); return; }
         const shuffled = [...data].sort(() => Math.random() - 0.5);
         setQuotes(shuffled);
+        setVisibleCount(PAGE_SIZE);
         setIsLoading(false);
-      });
+      })
+      .catch(() => { setQuotes([]); setIsLoading(false); });
   }, [query, selectedTags, selectedAuthors]);
 
   useEffect(() => {
-    fetch('/api/authors').then(res => res.json()).then(setAllAuthors);
-    fetch('/api/tags').then(res => res.json()).then(setAllTags);
+    fetch('/api/authors').then(res => res.json()).then(setAllAuthors).catch(() => {});
+    fetch('/api/tags').then(res => res.json()).then(setAllTags).catch(() => {});
   }, []);
+
+  const visibleQuotes = quotes.slice(0, visibleCount);
 
 
   const activeQuote = useMemo(
@@ -256,7 +263,11 @@ export default function Home() {
 
   const handleShuffle = () => {
     setQuotes(prev => [...prev].sort(() => Math.random() - 0.5));
+    setVisibleCount(PAGE_SIZE);
   };
+
+  const hasMoreQuotes = visibleCount < quotes.length;
+  const remainingCount = quotes.length - visibleCount;
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-white to-slate-100 dark:from-slate-900 dark:to-slate-950 text-slate-900 dark:text-slate-50">
@@ -460,16 +471,28 @@ export default function Home() {
               </button>
             </div>
           ) : (
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {quotes.map((quote) => (
-                <QuoteCard
-                  key={quote.id}
-                  quote={quote}
-                  onOpen={() => setActiveQuoteId(quote.id)}
-                  onTagToggle={toggleTag}
-                />
-              ))}
-            </div>
+            <>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {visibleQuotes.map((quote) => (
+                  <QuoteCard
+                    key={quote.id}
+                    quote={quote}
+                    onOpen={() => setActiveQuoteId(quote.id)}
+                    onTagToggle={toggleTag}
+                  />
+                ))}
+              </div>
+              {hasMoreQuotes && (
+                <div className="mt-8 flex justify-center">
+                  <button
+                    onClick={() => setVisibleCount(prev => prev + PAGE_SIZE)}
+                    className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:translate-y-[-1px] dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:bg-slate-800"
+                  >
+                    Load more ({remainingCount} remaining)
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </section>
       </div>

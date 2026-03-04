@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -22,10 +22,15 @@ const libreBaskerville = Libre_Baskerville({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: "My Wisdom Hub",
   description: "A curated collection of 133 quotes gathered over 20 years from books, interviews, and diverse sources. Discover insights on wisdom, philosophy, and personal growth.",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
   keywords: ["quotes", "wisdom", "philosophy", "inspiration", "personal growth", "knowledge", "insights"],
   authors: [{ name: "Deven" }],
   creator: "Deven",
