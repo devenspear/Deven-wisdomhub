@@ -5,6 +5,10 @@ A curated collection of quotes and insights gathered over 20 years. Built with N
 ## Features
 
 - **Quote Browser** - Search, filter by tags and authors, reader mode
+- **Shareable Quote Links** - Share any quote via URL (`?quote=<uuid>`), auto-opens in reader mode
+  - iOS/mobile: native share sheet via Web Share API
+  - Desktop: copy-to-clipboard with visual feedback
+  - Browser back button support for closing shared quote modals
 - **Admin Dashboard** - Full CRUD for managing quotes at `/admin`
 - **AI-Powered Tagging** - Gemini 1.5 Pro automatically suggests tags when adding quotes
 - **Dark Mode** - Full theme support
@@ -93,6 +97,7 @@ POSTGRES_URL="your-connection-string" pnpm run import-quotes
 
 ### Public
 - `GET /api/quotes` - List quotes with filtering
+- `GET /api/quotes/[id]` - Get a single quote by UUID (for shareable links)
 - `GET /api/quotes/random` - Get a random quote
 - `GET /api/quotes/related` - Get related quotes
 - `GET /api/authors` - List all authors
