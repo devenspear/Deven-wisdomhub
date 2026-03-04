@@ -176,7 +176,7 @@ const ReaderModal = ({
             Close
           </button>
         </div>
-        <p className="text-2xl leading-relaxed text-slate-900 dark:text-slate-50 font-serif">“{quote.text}”</p>
+        <p className="mt-10 text-2xl leading-relaxed text-slate-900 dark:text-slate-50 font-serif">"{quote.text}"</p>
         <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-slate-600">
           <span className="rounded-full bg-slate-900 px-3 py-1 font-semibold text-white dark:bg-slate-50 dark:text-slate-900">
             {quote.authorActual || "Unknown"}
