@@ -19,6 +19,9 @@ import {
   BookOpen,
   CheckCircle,
   AlertCircle,
+  AlertTriangle,
+  ExternalLink,
+  ShieldCheck,
 } from "lucide-react";
 
 type Tag = {
@@ -53,6 +56,18 @@ type LookupResult = {
   tags?: string[];
   confidence?: 'high' | 'medium' | 'low';
   message?: string;
+};
+
+type DuplicateMatch = {
+  id: string;
+  text: string;
+  authorName: string;
+  similarity: 'exact' | 'similar';
+};
+
+type DuplicateCheckResult = {
+  isDuplicate: boolean;
+  matches: DuplicateMatch[];
 };
 
 type ActiveTab = 'quotes' | 'lookup';
@@ -101,6 +116,17 @@ export default function AdminQuotesPage() {
   const [lookupTagInput, setLookupTagInput] = useState("");
   const [isSavingLookup, setIsSavingLookup] = useState(false);
   const [lookupSaveSuccess, setLookupSaveSuccess] = useState(false);
+
+  // Duplicate detection state
+  const [duplicateCheck, setDuplicateCheck] = useState<{
+    checking: boolean;
+    result: DuplicateCheckResult | null;
+  }>({ checking: false, result: null });
+  const [modalDuplicateCheck, setModalDuplicateCheck] = useState<{
+    checking: boolean;
+    result: DuplicateCheckResult | null;
+  }>({ checking: false, result: null });
+  const [showDuplicateConfirm, setShowDuplicateConfirm] = useState(false);
 
   const fetchQuotes = useCallback(async () => {
     setIsLoading(true);
@@ -222,6 +248,8 @@ export default function AdminQuotesPage() {
     setTagInput("");
     setSuggestedTags([]);
     lastTextRef.current = "";
+    setModalDuplicateCheck({ checking: false, result: null });
+    setShowDuplicateConfirm(false);
     setIsModalOpen(true);
   };
 
@@ -255,6 +283,26 @@ export default function AdminQuotesPage() {
     setFormData({ ...formData, tags: formData.tags.filter((t) => t !== tag) });
   };
 
+  // Duplicate check function
+  const checkForDuplicate = async (
+    text: string
+  ): Promise<DuplicateCheckResult | null> => {
+    try {
+      const res = await fetch("/api/admin/quotes/check-duplicate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text }),
+      });
+      if (res.ok) {
+        return await res.json();
+      }
+      return null;
+    } catch (error) {
+      console.error("Failed to check for duplicates:", error);
+      return null;
+    }
+  };
+
   // Lookup functions
   const handleLookupQuote = async () => {
     if (lookupInput.trim().length < 10) return;
@@ -262,6 +310,7 @@ export default function AdminQuotesPage() {
     setIsLookingUp(true);
     setLookupResult(null);
     setLookupSaveSuccess(false);
+    setDuplicateCheck({ checking: false, result: null });
 
     try {
       const res = await fetch("/api/admin/lookup-quote", {
@@ -281,6 +330,13 @@ export default function AdminQuotesPage() {
           tags: data.tags || [],
           isFavorite: false,
         });
+
+        // Auto-check for duplicates
+        if (data.text) {
+          setDuplicateCheck({ checking: true, result: null });
+          const dupResult = await checkForDuplicate(data.text);
+          setDuplicateCheck({ checking: false, result: dupResult });
+        }
       }
     } catch (error) {
       console.error("Failed to lookup quote:", error);
@@ -323,6 +379,7 @@ export default function AdminQuotesPage() {
 
       if (res.ok) {
         setLookupSaveSuccess(true);
+        setDuplicateCheck({ checking: false, result: null });
         fetchQuotes();
         fetchMetadata();
         // Reset after short delay
@@ -338,6 +395,22 @@ export default function AdminQuotesPage() {
           });
           setLookupSaveSuccess(false);
         }, 2000);
+      } else if (res.status === 409) {
+        const data = await res.json();
+        setDuplicateCheck({
+          checking: false,
+          result: {
+            isDuplicate: true,
+            matches: [
+              {
+                id: data.existingQuote.id,
+                text: data.existingQuote.text,
+                authorName: data.existingQuote.authorName,
+                similarity: 'exact',
+              },
+            ],
+          },
+        });
       } else {
         console.error("Failed to save quote");
       }
@@ -359,11 +432,24 @@ export default function AdminQuotesPage() {
       isFavorite: false,
     });
     setLookupSaveSuccess(false);
+    setDuplicateCheck({ checking: false, result: null });
   };
 
   const handleSave = async () => {
     if (!formData.text.trim() || !formData.authorName.trim()) {
       return;
+    }
+
+    // For new quotes, check for duplicates first
+    if (!editingQuote && !showDuplicateConfirm) {
+      setModalDuplicateCheck({ checking: true, result: null });
+      const dupResult = await checkForDuplicate(formData.text);
+      setModalDuplicateCheck({ checking: false, result: dupResult });
+
+      if (dupResult?.isDuplicate) {
+        setShowDuplicateConfirm(true);
+        return;
+      }
     }
 
     setIsSaving(true);
@@ -381,8 +467,27 @@ export default function AdminQuotesPage() {
 
       if (res.ok) {
         setIsModalOpen(false);
+        setShowDuplicateConfirm(false);
+        setModalDuplicateCheck({ checking: false, result: null });
         fetchQuotes();
         fetchMetadata();
+      } else if (res.status === 409) {
+        const data = await res.json();
+        setModalDuplicateCheck({
+          checking: false,
+          result: {
+            isDuplicate: true,
+            matches: [
+              {
+                id: data.existingQuote.id,
+                text: data.existingQuote.text,
+                authorName: data.existingQuote.authorName,
+                similarity: 'exact',
+              },
+            ],
+          },
+        });
+        setShowDuplicateConfirm(true);
       } else {
         console.error("Failed to save quote");
       }
@@ -717,6 +822,71 @@ export default function AdminQuotesPage() {
                       </p>
                     )}
 
+                    {/* Duplicate Check Status */}
+                    {duplicateCheck.checking && (
+                      <div className="mt-3 flex items-center gap-2 rounded-lg bg-slate-50 p-3 dark:bg-slate-800/50">
+                        <Loader2 className="h-4 w-4 animate-spin text-slate-500" />
+                        <span className="text-sm text-slate-600 dark:text-slate-400">
+                          Checking for duplicates...
+                        </span>
+                      </div>
+                    )}
+
+                    {duplicateCheck.result && !duplicateCheck.checking && (
+                      duplicateCheck.result.isDuplicate ? (
+                        <div className={`mt-3 rounded-lg p-3 ${
+                          duplicateCheck.result.matches.some(m => m.similarity === 'exact')
+                            ? 'bg-red-50 border border-red-200 dark:bg-red-900/20 dark:border-red-800'
+                            : 'bg-yellow-50 border border-yellow-200 dark:bg-yellow-900/20 dark:border-yellow-800'
+                        }`}>
+                          <div className="flex items-center gap-2">
+                            {duplicateCheck.result.matches.some(m => m.similarity === 'exact') ? (
+                              <>
+                                <AlertCircle className="h-4 w-4 text-red-500" />
+                                <span className="text-sm font-medium text-red-700 dark:text-red-400">
+                                  This exact quote already exists in your database
+                                </span>
+                              </>
+                            ) : (
+                              <>
+                                <AlertTriangle className="h-4 w-4 text-yellow-600 dark:text-yellow-400" />
+                                <span className="text-sm font-medium text-yellow-700 dark:text-yellow-400">
+                                  Similar quote found in your database
+                                </span>
+                              </>
+                            )}
+                          </div>
+                          {duplicateCheck.result.matches.map((match) => (
+                            <div key={match.id} className="mt-2 rounded-md bg-white/60 p-2 dark:bg-slate-800/60">
+                              <p className="text-sm text-slate-700 dark:text-slate-300 font-serif line-clamp-2">
+                                &ldquo;{match.text}&rdquo;
+                              </p>
+                              <div className="mt-1 flex items-center justify-between">
+                                <span className="text-xs text-slate-500 dark:text-slate-400">
+                                  — {match.authorName}
+                                </span>
+                                <a
+                                  href={`/?quote=${match.id}`}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                                >
+                                  View quote <ExternalLink className="h-3 w-3" />
+                                </a>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="mt-3 flex items-center gap-2 rounded-lg bg-green-50 border border-green-200 p-3 dark:bg-green-900/20 dark:border-green-800">
+                          <ShieldCheck className="h-4 w-4 text-green-600 dark:text-green-400" />
+                          <span className="text-sm font-medium text-green-700 dark:text-green-400">
+                            New quote — not in database yet
+                          </span>
+                        </div>
+                      )
+                    )}
+
                     {/* Editable Form */}
                     <div className="mt-6 space-y-4">
                       {/* Quote text */}
@@ -872,7 +1042,10 @@ export default function AdminQuotesPage() {
                           isSavingLookup ||
                           lookupSaveSuccess ||
                           !lookupFormData.text.trim() ||
-                          !lookupFormData.authorName.trim()
+                          !lookupFormData.authorName.trim() ||
+                          duplicateCheck.checking ||
+                          (duplicateCheck.result?.isDuplicate &&
+                            duplicateCheck.result.matches.some(m => m.similarity === 'exact'))
                         }
                         className={`inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium transition ${
                           lookupSaveSuccess
@@ -1125,25 +1298,81 @@ export default function AdminQuotesPage() {
               </div>
             </div>
 
+            {/* Duplicate Warning in Modal */}
+            {!editingQuote && showDuplicateConfirm && modalDuplicateCheck.result?.isDuplicate && (
+              <div className="mt-4 rounded-lg bg-yellow-50 border border-yellow-200 p-3 dark:bg-yellow-900/20 dark:border-yellow-800">
+                <div className="flex items-center gap-2">
+                  <AlertTriangle className="h-4 w-4 text-yellow-600 dark:text-yellow-400" />
+                  <span className="text-sm font-medium text-yellow-700 dark:text-yellow-400">
+                    {modalDuplicateCheck.result.matches.some(m => m.similarity === 'exact')
+                      ? 'This exact quote already exists!'
+                      : 'A similar quote was found in your database'}
+                  </span>
+                </div>
+                {modalDuplicateCheck.result.matches.map((match) => (
+                  <div key={match.id} className="mt-2 rounded-md bg-white/60 p-2 dark:bg-slate-800/60">
+                    <p className="text-sm text-slate-700 dark:text-slate-300 font-serif line-clamp-2">
+                      &ldquo;{match.text}&rdquo;
+                    </p>
+                    <span className="text-xs text-slate-500 dark:text-slate-400">
+                      — {match.authorName}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {modalDuplicateCheck.checking && (
+              <div className="mt-4 flex items-center gap-2">
+                <Loader2 className="h-4 w-4 animate-spin text-slate-500" />
+                <span className="text-sm text-slate-600 dark:text-slate-400">
+                  Checking for duplicates...
+                </span>
+              </div>
+            )}
+
             <div className="mt-6 flex justify-end gap-3">
               <button
-                onClick={() => setIsModalOpen(false)}
+                onClick={() => {
+                  setIsModalOpen(false);
+                  setShowDuplicateConfirm(false);
+                  setModalDuplicateCheck({ checking: false, result: null });
+                }}
                 className="rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
               >
                 Cancel
               </button>
-              <button
-                onClick={handleSave}
-                disabled={
-                  isSaving || !formData.text.trim() || !formData.authorName.trim()
-                }
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-800 disabled:opacity-50 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200"
-              >
-                {isSaving ? (
-                  <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent dark:border-slate-900 dark:border-t-transparent" />
-                ) : null}
-                {editingQuote ? "Update Quote" : "Add Quote"}
-              </button>
+              {showDuplicateConfirm && modalDuplicateCheck.result?.matches.some(m => m.similarity !== 'exact') ? (
+                <button
+                  onClick={() => {
+                    handleSave();
+                  }}
+                  className="inline-flex items-center gap-2 rounded-lg bg-yellow-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-yellow-700 disabled:opacity-50"
+                  disabled={isSaving}
+                >
+                  {isSaving ? (
+                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                  ) : null}
+                  Add Anyway
+                </button>
+              ) : (
+                <button
+                  onClick={handleSave}
+                  disabled={
+                    isSaving ||
+                    modalDuplicateCheck.checking ||
+                    !formData.text.trim() ||
+                    !formData.authorName.trim() ||
+                    (showDuplicateConfirm && modalDuplicateCheck.result?.matches.some(m => m.similarity === 'exact'))
+                  }
+                  className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-800 disabled:opacity-50 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200"
+                >
+                  {isSaving ? (
+                    <div className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent dark:border-slate-900 dark:border-t-transparent" />
+                  ) : null}
+                  {editingQuote ? "Update Quote" : "Add Quote"}
+                </button>
+              )}
             </div>
           </div>
         </div>

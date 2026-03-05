@@ -99,6 +99,29 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Check for exact duplicate before inserting
+    const duplicateCheck = await sql`
+      SELECT q.id, q.body, a.name as author_name
+      FROM quotes q
+      JOIN authors a ON q.author_id = a.id
+      WHERE LOWER(q.body) = LOWER(${text})
+    `;
+
+    if (duplicateCheck.rows.length > 0) {
+      const existing = duplicateCheck.rows[0];
+      return NextResponse.json(
+        {
+          error: 'Duplicate quote',
+          existingQuote: {
+            id: existing.id,
+            text: existing.body,
+            authorName: existing.author_name,
+          },
+        },
+        { status: 409 }
+      );
+    }
+
     // Find or create author
     let authorResult = await sql`
       SELECT id FROM authors WHERE name = ${authorName}
