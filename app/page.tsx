@@ -57,7 +57,7 @@ const QuoteCard = ({ quote, onOpen, onTagToggle }: {
   };
 
   return (
-    <article className="group relative rounded-2xl bg-white/80 p-6 card-shadow surface-border dark:bg-slate-900/80 transition-all hover:translate-y-[-2px] animate-in fade-in zoom-in-95 duration-500">
+    <article className="group relative rounded-2xl p-6 liquid-glass-surface transition-all hover:translate-y-[-2px] animate-in fade-in zoom-in-95 duration-500">
       <div className="absolute right-4 top-4 opacity-0 transition-opacity group-hover:opacity-100">
         <button
           onClick={handleCopy}
@@ -67,7 +67,7 @@ const QuoteCard = ({ quote, onOpen, onTagToggle }: {
           {copied ? <Check className="h-4 w-4 text-green-500" /> : <Copy className="h-4 w-4" />}
         </button>
       </div>
-      <p className="text-xl leading-relaxed text-slate-900 dark:text-slate-50 font-serif">“{quote.text}”</p>
+      <p className="text-xl leading-relaxed text-slate-900 dark:text-slate-50 font-serif">"{quote.text}"</p>
       <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-slate-600">
         <span className="rounded-full bg-slate-100 px-3 py-1 font-semibold text-slate-800 dark:bg-slate-800 dark:text-slate-200">
           {quote.authorActual || "Unknown"}
@@ -149,12 +149,12 @@ const ReaderModal = ({
   };
 
   return (
-    <div className="fixed inset-0 z-20 flex items-center justify-center bg-black/40 p-4 backdrop-blur">
-      <div className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-3xl bg-white p-8 shadow-2xl dark:bg-slate-950">
+    <div className="fixed inset-0 z-20 flex items-center justify-center bg-black/40 p-4 sm:p-8 backdrop-blur" onClick={onClose}>
+      <div className="relative max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-3xl p-6 sm:p-10 md:p-12 shadow-2xl liquid-glass" onClick={(e) => e.stopPropagation()}>
         <div className="absolute right-4 top-4 flex items-center gap-2">
           <button
             onClick={handleShare}
-            className="rounded-full bg-slate-100 px-3 py-1 text-sm font-semibold text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700 inline-flex items-center gap-1.5"
+            className="rounded-full liquid-glass-btn-share px-3 py-1 text-sm font-semibold inline-flex items-center gap-1.5"
             title="Share this quote"
           >
             {linkCopied ? (
@@ -171,12 +171,12 @@ const ReaderModal = ({
           </button>
           <button
             onClick={onClose}
-            className="rounded-full bg-slate-100 px-3 py-1 text-sm font-semibold text-slate-700 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
+            className="rounded-full liquid-glass-btn-close px-3 py-1 text-sm font-semibold"
           >
             Close
           </button>
         </div>
-        <p className="mt-10 text-2xl leading-relaxed text-slate-900 dark:text-slate-50 font-serif">"{quote.text}"</p>
+        <p className="mt-14 text-2xl leading-relaxed text-slate-900 dark:text-slate-50 font-serif">"{quote.text}"</p>
         <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-slate-600">
           <span className="rounded-full bg-slate-900 px-3 py-1 font-semibold text-white dark:bg-slate-50 dark:text-slate-900">
             {quote.authorActual || "Unknown"}
@@ -190,7 +190,7 @@ const ReaderModal = ({
               <button
                 key={tag}
                 onClick={() => onTagClick(tag)}
-                className="rounded-full bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700 transition hover:bg-slate-100 dark:bg-slate-800/50 dark:text-slate-300 dark:hover:bg-slate-800"
+                className="rounded-full liquid-glass-tag px-3 py-1 text-xs font-semibold text-slate-700 dark:text-slate-300"
               >
                 #{tag}
               </button>
@@ -199,14 +199,14 @@ const ReaderModal = ({
         )}
 
         {relatedByAuthor.length > 0 && (
-          <div className="mt-8 rounded-2xl bg-slate-50 p-4 dark:bg-slate-900">
+          <div className="mt-8 rounded-2xl liquid-glass-card p-4">
             <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300">
               More from {quote.authorActual}
             </h3>
             <ul className="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-400">
               {relatedByAuthor.map((q) => (
                 <li key={q.id} className="leading-relaxed">
-                  “{q.text}”
+                  "{q.text}"
                 </li>
               ))}
             </ul>
@@ -214,12 +214,12 @@ const ReaderModal = ({
         )}
 
         {relatedByTag.length > 0 && (
-          <div className="mt-6 rounded-2xl bg-slate-50 p-4 dark:bg-slate-900">
+          <div className="mt-6 rounded-2xl liquid-glass-card p-4">
             <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300">Related by tags</h3>
             <ul className="mt-3 space-y-2 text-sm text-slate-700 dark:text-slate-400">
               {relatedByTag.map((q) => (
                 <li key={q.id} className="leading-relaxed">
-                  “{q.text}” — {q.authorActual}
+                  "{q.text}" — {q.authorActual}
                 </li>
               ))}
             </ul>
