@@ -57,10 +57,13 @@ const QuoteCard = ({ quote, onOpen, onTagToggle }: {
   };
 
   return (
-    <article className="group relative rounded-2xl p-6 liquid-glass-surface transition-all hover:translate-y-[-2px] animate-in fade-in zoom-in-95 duration-500">
+    <article
+      onClick={onOpen}
+      className="group relative rounded-2xl p-6 pb-14 liquid-glass-surface transition-all hover:translate-y-[-2px] cursor-pointer animate-in fade-in zoom-in-95 duration-500"
+    >
       <div className="absolute right-4 top-4 opacity-0 transition-opacity group-hover:opacity-100">
         <button
-          onClick={handleCopy}
+          onClick={(e) => { e.stopPropagation(); handleCopy(); }}
           className="rounded-full bg-slate-100 p-2 text-slate-600 hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-400 dark:hover:bg-slate-700"
           title="Copy to clipboard"
         >
@@ -79,7 +82,7 @@ const QuoteCard = ({ quote, onOpen, onTagToggle }: {
           {quote.tags.map((tag) => (
             <button
               key={tag}
-              onClick={() => onTagToggle(tag)}
+              onClick={(e) => { e.stopPropagation(); onTagToggle(tag); }}
               className="rounded-full bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700 transition hover:bg-slate-100 dark:bg-slate-800/50 dark:text-slate-300 dark:hover:bg-slate-800"
             >
               #{tag}
@@ -87,15 +90,13 @@ const QuoteCard = ({ quote, onOpen, onTagToggle }: {
           ))}
         </div>
       )}
-      <div className="mt-6 flex justify-between gap-3 text-sm">
-        <button
-          onClick={onOpen}
-          className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-slate-700 to-slate-800 px-4 py-2 font-semibold text-white transition hover:translate-y-[-1px] hover:from-slate-600 hover:to-slate-700 dark:from-slate-600 dark:to-slate-700 dark:hover:from-slate-500 dark:hover:to-slate-600"
-        >
-          <BookOpen className="h-4 w-4" />
-          Reader mode
-        </button>
-      </div>
+      <button
+        onClick={(e) => { e.stopPropagation(); onOpen(); }}
+        className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-slate-700 to-slate-800 px-4 py-2 text-sm font-semibold text-white transition hover:translate-y-[-1px] hover:from-slate-600 hover:to-slate-700 dark:from-slate-600 dark:to-slate-700 dark:hover:from-slate-500 dark:hover:to-slate-600"
+      >
+        <BookOpen className="h-4 w-4" />
+        Reader mode
+      </button>
     </article>
   );
 };
@@ -646,6 +647,11 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      {/* Footer */}
+      <footer className="border-t border-slate-200 dark:border-slate-800 py-6 text-center text-sm text-slate-500 dark:text-slate-400">
+        &copy; 2026 Deven Spear &middot; v0.1.8
+      </footer>
     </main>
   );
 }
