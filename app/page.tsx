@@ -56,6 +56,8 @@ const QuoteCard = ({ quote, onOpen, onTagToggle }: {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const isLongQuote = quote.text.length > 180;
+
   return (
     <article
       onClick={onOpen}
@@ -70,32 +72,41 @@ const QuoteCard = ({ quote, onOpen, onTagToggle }: {
           {copied ? <Check className="h-4 w-4 text-green-500" /> : <Copy className="h-4 w-4" />}
         </button>
       </div>
-      <p className="text-xl leading-relaxed text-slate-900 dark:text-slate-50 font-serif">"{quote.text}"</p>
-      <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-slate-600">
-        <span className="rounded-full bg-slate-100 px-3 py-1 font-semibold text-slate-800 dark:bg-slate-800 dark:text-slate-200">
-          {quote.authorActual || "Unknown"}
-        </span>
-        {quote.source && <span className="rounded-full bg-slate-50 px-3 py-1 dark:bg-slate-800/50">{quote.source}</span>}
-      </div>
-      {quote.tags.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-2">
-          {quote.tags.map((tag) => (
-            <button
-              key={tag}
-              onClick={(e) => { e.stopPropagation(); onTagToggle(tag); }}
-              className="rounded-full bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700 transition hover:bg-slate-100 dark:bg-slate-800/50 dark:text-slate-300 dark:hover:bg-slate-800"
-            >
-              #{tag}
-            </button>
-          ))}
+      <p className="text-2xl leading-relaxed text-slate-900 dark:text-slate-50 font-serif">"{quote.text}"</p>
+      {!isLongQuote && (
+        <>
+          <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-slate-600">
+            <span className="rounded-full bg-slate-100 px-3 py-1 font-semibold text-slate-800 dark:bg-slate-800 dark:text-slate-200">
+              {quote.authorActual || "Unknown"}
+            </span>
+            {quote.source && <span className="rounded-full bg-slate-50 px-3 py-1 dark:bg-slate-800/50">{quote.source}</span>}
+          </div>
+          {quote.tags.length > 0 && (
+            <div className="mt-4 flex flex-wrap gap-2">
+              {quote.tags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={(e) => { e.stopPropagation(); onTagToggle(tag); }}
+                  className="rounded-full bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700 transition hover:bg-slate-100 dark:bg-slate-800/50 dark:text-slate-300 dark:hover:bg-slate-800"
+                >
+                  #{tag}
+                </button>
+              ))}
+            </div>
+          )}
+        </>
+      )}
+      {isLongQuote && (
+        <div className="mt-4 text-sm text-slate-500 dark:text-slate-400 font-medium">
+          — {quote.authorActual || "Unknown"}
         </div>
       )}
       <button
         onClick={(e) => { e.stopPropagation(); onOpen(); }}
-        className="absolute bottom-4 right-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-slate-700 to-slate-800 px-4 py-2 text-sm font-semibold text-white transition hover:translate-y-[-1px] hover:from-slate-600 hover:to-slate-700 dark:from-slate-600 dark:to-slate-700 dark:hover:from-slate-500 dark:hover:to-slate-600"
+        className="absolute bottom-4 right-4 rounded-full p-2 text-slate-400 transition hover:bg-slate-100 hover:text-slate-700 dark:hover:bg-slate-800 dark:hover:text-slate-200"
+        title="Reader mode"
       >
-        <BookOpen className="h-4 w-4" />
-        Reader mode
+        <BookOpen className="h-5 w-5" />
       </button>
     </article>
   );
@@ -650,7 +661,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-slate-200 dark:border-slate-800 py-6 text-center text-sm text-slate-500 dark:text-slate-400">
-        &copy; 2026 Deven Spear &middot; v0.1.8
+        &copy; 2026 Deven Spear &middot; v0.1.9
       </footer>
     </main>
   );
